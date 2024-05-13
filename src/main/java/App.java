@@ -1,6 +1,7 @@
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Arrays;
 import java.util.StringJoiner;
 
 /*Реализуйте публичный статический метод makeCensored(),
@@ -11,31 +12,24 @@ import java.util.StringJoiner;
 Словом считается любая непрерывная последовательность символов, включая любые спецсимволы (без пробелов).*/
 public class App {
     public static void main(String[] args) {
-        var text1 = "When you play the game of thrones, you win or you die";
-        String[] stopWords1 = {"die", "play"};
-        var result1 = App.makeCensored(text1, stopWords1);
-        var text2 = "chicken chicken? chicken! chicken";
-        String[] stopWords2 = {"?", "chicken"};
-        var result2 = App.makeCensored(text2, stopWords2);
-        System.out.println(result2);
-// => "$#%! chicken? chicken! $#%!"
-// => "When you $#%! the game of thrones, you win or you $#%!"
+        // Общие уникальные элементы: 1, 3, 2
+        //App.getSameCount(new int[] {1, 3, 2, 2}, new int[] {3, 1, 1, 2, 5}); // 3
+
+// Общие уникальные элементы: 4
+        //App.getSameCount(new int[] {1, 4, 4}, new int[] {4, 8, 4}); // 1
+
+// Общие уникальные элементы: 1, 10
+        //getSameCount(new int[] {1, 10, 3}, new int[] {10, 100, 35, 1}); // 2
+
+// Нет элементов
+        //getSameCount(new int[] {}, new int[] {}); // 0
+        System.out.println(Arrays.toString(getSameCount(new int[] {1, 3, 2, 2}, new int[] {3, 1, 1, 2, 5}))); // [1, 2, 3, 4, 5, 6]
     }
-
-    public static String makeCensored(String text, String[] stopWords) {
-        String[] words = text.split(" ");
-        StringJoiner censoredString = new StringJoiner(" ");
-        String replacementWord = "$#%!";
-        for (int i = 0; i < words.length; i++) {
-            if (ArrayUtils.contains(stopWords, words[i])) {
-                words[i] = replacementWord;
-                censoredString.add(words[i]);
-            } else {
-                censoredString.add(words[i]);
-            }
-        }
-        return censoredString.toString();
+    /*Реализуйте публичный статический метод getSameCount(),
+    который принимает на вход два массива целых чисел.
+    Метод должен возвращать количество общих уникальных значений в обоих массивах*/
+    public static int getSameCount(int[] numbers1, int[] numbers2) {
+        int sameCount;
+        return sameCount;
     }
-
-
 }
