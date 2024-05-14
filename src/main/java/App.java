@@ -1,8 +1,4 @@
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.Arrays;
-import java.util.StringJoiner;
 
 /*Реализуйте публичный статический метод makeCensored(),
 который заменяет каждое вхождение указанного слова (из списка переданных) в предложении
@@ -23,13 +19,23 @@ public class App {
 
 // Нет элементов
         //getSameCount(new int[] {}, new int[] {}); // 0
-        System.out.println(Arrays.toString(getSameCount(new int[] {1, 3, 2, 2}, new int[] {3, 1, 1, 2, 5}))); // [1, 2, 3, 4, 5, 6]
+        System.out.println(getSameCount(new int[] {1, 4, 4}, new int[] {4, 8, 4})); // 3
     }
     /*Реализуйте публичный статический метод getSameCount(),
     который принимает на вход два массива целых чисел.
     Метод должен возвращать количество общих уникальных значений в обоих массивах*/
     public static int getSameCount(int[] numbers1, int[] numbers2) {
-        int sameCount;
+        int[] uniqNumbers1 = Utils.uniq(numbers1);
+        int[] uniqNumbers2 = Utils.uniq(numbers2);
+        int sameCount = 0;
+        int counter = 0;
+        for (int num1 : uniqNumbers1) {
+            for (int num2 : uniqNumbers2) {
+                if (num1 == num2) {
+                    sameCount++;
+                }
+            }
+        }
         return sameCount;
     }
 }
