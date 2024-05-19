@@ -15,16 +15,21 @@ public class App {
     }
 
     public static int[] bubbleSort(int[] numbers) {
-        int[] sortedNumbers = new int[numbers.length];
-            for (int i = 0; i < numbers.length - 1; i++) {
+        //int[] sortedNumbers = new int[numbers.length];
+        int stepsCount = numbers.length - 1;
+        boolean isSwapped;
+        do {
+            isSwapped = false;
+            for (int i = 0; i < stepsCount; i++) {
                 if (numbers[i] > numbers[i + 1]) {
-                    sortedNumbers[i] = numbers[i + 1];
-                    sortedNumbers[i + 1] = numbers[i];
-                } else {
-                    sortedNumbers[i] = numbers[i];
-                    sortedNumbers[i + 1] = numbers[i + 1];
+                    int givenNumber = numbers[i];
+                    numbers[i] = numbers[i + 1];
+                    numbers[i + 1] = givenNumber;
+                    isSwapped = true;
                 }
             }
-        return sortedNumbers;
+            stepsCount--;
+        } while (isSwapped);
+    return numbers;
     }
 }
