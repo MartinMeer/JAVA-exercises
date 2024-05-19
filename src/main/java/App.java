@@ -1,41 +1,32 @@
-import java.util.Arrays;
 
-/*Реализуйте публичный статический метод makeCensored(),
-который заменяет каждое вхождение указанного слова (из списка переданных) в предложении
-на последовательность $#%! и возвращает полученную строку. Аргументы:
-Текст
-Массив стоп-слов
-Словом считается любая непрерывная последовательность символов, включая любые спецсимволы (без пробелов).*/
+/*Реализуйте публичный статический метод countUniqChars(),
+который принимает на вход строку и считает, сколько символов (без учёта повторяющихся символов) использовано в этой строке.
+Например, в строке "yy" используется всего один символ — 'y'. А в строке "111yya!" — используется четыре символа: '1', 'y', 'a' и '!'.*/
 public class App {
     public static void main(String[] args) {
-        // Общие уникальные элементы: 1, 3, 2
-        //App.getSameCount(new int[] {1, 3, 2, 2}, new int[] {3, 1, 1, 2, 5}); // 3
-
-// Общие уникальные элементы: 4
-        //App.getSameCount(new int[] {1, 4, 4}, new int[] {4, 8, 4}); // 1
-
-// Общие уникальные элементы: 1, 10
-        //getSameCount(new int[] {1, 10, 3}, new int[] {10, 100, 35, 1}); // 2
-
-// Нет элементов
-        //getSameCount(new int[] {}, new int[] {}); // 0
-        System.out.println(getSameCount(new int[] {1, 4, 4}, new int[] {4, 8, 4})); // 3
+        String str = "yy";
+        System.out.println(countUniqChars(str));
     }
-    /*Реализуйте публичный статический метод getSameCount(),
-    который принимает на вход два массива целых чисел.
-    Метод должен возвращать количество общих уникальных значений в обоих массивах*/
-    public static int getSameCount(int[] numbers1, int[] numbers2) {
-        int[] uniqNumbers1 = Utils.uniq(numbers1);
-        int[] uniqNumbers2 = Utils.uniq(numbers2);
-        int sameCount = 0;
+
+    public static int countUniqChars(String str) {
+        char[] chars = str.toCharArray();
+        int countUniqChars = 0;
         int counter = 0;
-        for (int num1 : uniqNumbers1) {
-            for (int num2 : uniqNumbers2) {
-                if (num1 == num2) {
-                    sameCount++;
+        for (char givenChar : chars) {
+            int entry = 0;
+            for (char aChar : chars) {
+                if (givenChar == aChar) {
+                    entry++;
+                    chars[counter] = 0;
                 }
             }
+            if (entry < 2) {
+                countOf++;
+            } else if (entry == 1) {
+                countOf++;
+            }
+            counter++;
         }
-        return sameCount;
+        return countUniqChars;
     }
 }
