@@ -2,51 +2,28 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.Arrays;
 
-/*Реализуйте публичный статический метод getIntersectionOfSortedArrays(),
-который принимает на вход два отсортированных массива целых чисел и находит их пересечение.
-Пересечение двух массивов A и B — это массив только с теми элементами A и B, которые одновременно принадлежат обоим массивам, без дублей.
-Алгоритм
-Поиск пересечения двух неотсортированных массивов —
-операция, в рамках которой выполняется вложенный цикл с полной проверкой каждого элемента первого массива на вхождение во второй.
-Сложность данного алгоритма O(n * m) где n и m — размерности массивов.
-Если массивы отсортированы, то можно реализовать алгоритм, сложность которого уже O(n + m), что значительно лучше.
-
-Суть алгоритма довольно проста. В коде вводятся два указателя (индекса) на каждый из массивов.
-Начальное значение каждого указателя 0. Затем идёт проверка элементов, находящихся под этими индексами в обоих массивах.
-Если они совпадают, то значение заносится в результирующий массив, а оба индекса инкрементируются.
-Если значение в первом массиве больше, чем во втором, то инкрементируется указатель второго массива, иначе — первого.
-NB метод Arrays.copyOf() позволяет скопировать первые несколько элементов массива*/
+/*Реализуйте в классе метод isEqual().
+Метод сравнивает текущего пользователя (того, на котором мы вызываем этот метод)
+с другим пользователем (переданным в метод в качестве параметра).
+Сравнение пользователей происходит на основе их идентификаторов.
+Если идентификаторы пользователей равны, то это один и тот же пользователь и метод isEqual() должен вернуть true.
+В другом случае метод должен вернуть false.*/
 public class App {
     public static void main(String[] args) {
-        int[] numbers1 = {10, 11, 24};
-        int[] numbers2 = {10, 13, 14, 18, 24, 30};
-        var result1 = App.getIntersectionOfSortedArrays(numbers1, numbers2);
-        System.out.println(Arrays.toString(result1)); // => [10, 24]
+        var user1 = new User(1, "Nick12");
 
-        int[] numbers3 = {10, 11, 24};
-        int[] numbers4 = {-2, 3, 4};
-        var result2 = App.getIntersectionOfSortedArrays(numbers3, numbers4);
-        System.out.println(Arrays.toString(result2)); // => []
-    }
+// Другой пользователь с такими же id
+        var user2 = new User(1, "Nick");
 
-    public static int[] getIntersectionOfSortedArrays(int[] numbers1, int[] numbers2) {
-        int resultLength = Math.max(numbers1.length, numbers2.length);
-        int[] result;
-        //int cutResultIndex = ArrayUtils.indexOf(result, 0);
-        int index1 = 0;
-        int index2 = 0;
-            for (int i = 0; i < resultLength ; i++) {
-                if (numbers1[index1] == numbers2[index2]) {
-                    result[i] = numbers1[index1];
-                    index1++;
-                    index2++;
-                } else if (numbers1[index1] > numbers2[index2]) {
-                    index1++;
-                } else {
-                    index2++;
-                }
-            }
+// Сравниваем пользователя user1 с другим пользователем user2
+// Так как идентификаторы совпадают, это один и тот же пользователь
+        user1.isEqual(user2); // true
 
-        return result;//Arrays.copyOfRange(result, 0, cutResultIndex);
+// У пользователя другой id
+        var user3 = new User(14, "Nick12");
+
+        user1.isEqual(user3); // false
+
+
     }
 }
