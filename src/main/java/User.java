@@ -22,8 +22,9 @@ public class User {
         this.nick = nick;
     }
 
-    public void isEqual(User user2) {
+    public boolean isEqual(User user2) {
 
 
+        return false;
     }
 }

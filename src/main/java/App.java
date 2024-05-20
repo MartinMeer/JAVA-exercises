@@ -24,6 +24,8 @@ public class App {
 
         user1.isEqual(user3); // false
 
+        System.out.println(user1.isEqual(user3));
+
 
     }
 }
