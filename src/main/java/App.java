@@ -1,56 +1,52 @@
+import org.apache.commons.lang3.ArrayUtils;
+
 import java.util.Arrays;
 
-/*Название метода bubbleSort не отражает его функциональность. Рекомендуется использовать более информативное название, например sortNumbers.
-Переменная stepsCount можно объявить внутри цикла do-while, так как она используется только внутри этого цикла.
-Вместо использования do-while цикла, можно использовать обычный while цикл, так как условие выполнения цикла не зависит от первоначального значения isSwapped.
-Добавить проверку на null для массива numbers, чтобы избежать возможности возникновения NullPointerException.
-Добавить проверку на пустой массив numbers, чтобы избежать лишних итераций цикла.
-Добавить аннотацию @param для параметра numbers, чтобы указать, что это массив чисел.
-Добавить аннотацию @return для метода sortNumbers, чтобы указать, что метод ничего не возвращает.
-Внутри цикла while переменная stepsCount инициализируется на каждой итерации, что является избыточным.
-    Рекомендуется инициализировать stepsCount один раз перед циклом.
-Внутри цикла for переменная givenNumber имеет неинформативное название.
-    Рекомендуется использовать более понятное название, например temp.
-Внутри цикла for необходимо добавить проверку на выход за границы массива.
-    В текущей реализации, если i равно numbers.length - 1, то обращение к numbers[i + 1] вызовет ArrayIndexOutOfBoundsException.
-    Рекомендуется добавить условие if (i < stepsCount) перед обращением к элементу массива.*/
+/*Реализуйте публичный статический метод getIntersectionOfSortedArrays(),
+который принимает на вход два отсортированных массива целых чисел и находит их пересечение.
+Пересечение двух массивов A и B — это массив только с теми элементами A и B, которые одновременно принадлежат обоим массивам, без дублей.
+Алгоритм
+Поиск пересечения двух неотсортированных массивов —
+операция, в рамках которой выполняется вложенный цикл с полной проверкой каждого элемента первого массива на вхождение во второй.
+Сложность данного алгоритма O(n * m) где n и m — размерности массивов.
+Если массивы отсортированы, то можно реализовать алгоритм, сложность которого уже O(n + m), что значительно лучше.
+
+Суть алгоритма довольно проста. В коде вводятся два указателя (индекса) на каждый из массивов.
+Начальное значение каждого указателя 0. Затем идёт проверка элементов, находящихся под этими индексами в обоих массивах.
+Если они совпадают, то значение заносится в результирующий массив, а оба индекса инкрементируются.
+Если значение в первом массиве больше, чем во втором, то инкрементируется указатель второго массива, иначе — первого.
+NB метод Arrays.copyOf() позволяет скопировать первые несколько элементов массива*/
 public class App {
     public static void main(String[] args) {
-        int[] numbers = {8, 5, 2, 6, 9, 3, 4, 1, 9};
-        bubbleSort(numbers);
-        System.out.println(Arrays.toString(numbers));
+        int[] numbers1 = {10, 11, 24};
+        int[] numbers2 = {10, 13, 14, 18, 24, 30};
+        var result1 = App.getIntersectionOfSortedArrays(numbers1, numbers2);
+        System.out.println(Arrays.toString(result1)); // => [10, 24]
+
+        int[] numbers3 = {10, 11, 24};
+        int[] numbers4 = {-2, 3, 4};
+        var result2 = App.getIntersectionOfSortedArrays(numbers3, numbers4);
+        System.out.println(Arrays.toString(result2)); // => []
     }
 
-    public static void bubbleSort(int[] numbers) { //написано по рекомендациям TotaAI - не работает, если в последней паре первое число < второго числа!
-        boolean isSwapped = true;
-        while (isSwapped) {
-            int stepsCount = numbers.length - 1;
-            isSwapped = false;
-            for (int i = 0; i < stepsCount; i++) {
-                if (numbers[i] > numbers[i + 1]) {
-                    int givenNumber = numbers[i];
-                    numbers[i] = numbers[i + 1];
-                    numbers[i + 1] = givenNumber;
-                    isSwapped = true;
+    public static int[] getIntersectionOfSortedArrays(int[] numbers1, int[] numbers2) {
+        int resultLength = Math.max(numbers1.length, numbers2.length);
+        int[] result;
+        //int cutResultIndex = ArrayUtils.indexOf(result, 0);
+        int index1 = 0;
+        int index2 = 0;
+            for (int i = 0; i < resultLength ; i++) {
+                if (numbers1[index1] == numbers2[index2]) {
+                    result[i] = numbers1[index1];
+                    index1++;
+                    index2++;
+                } else if (numbers1[index1] > numbers2[index2]) {
+                    index1++;
+                } else {
+                    index2++;
                 }
             }
-        }
-    }
-    public static void bubbleSortNumbers1(int[] numbers) {
-        //int stepsCount = numbers.length - 1;
-        boolean isSwapped;
-        do {
-            int stepsCount = numbers.length - 1;
-            isSwapped = false;
-            for (int i = 0; i < stepsCount; i++) {
-                if (numbers[i] > numbers[i + 1]) {
-                    int givenNumber = numbers[i];
-                    numbers[i] = numbers[i + 1];
-                    numbers[i + 1] = givenNumber;
-                    isSwapped = true;
-                }
-            }
-            //stepsCount--;
-        } while (isSwapped);
+
+        return result;//Arrays.copyOfRange(result, 0, cutResultIndex);
     }
 }
