@@ -12,6 +12,8 @@ public class User {
     private String nick;
 
     public User(int id, String nick) {
+        this.id = id;
+        this.nick = nick;
     }
 
 
@@ -32,9 +34,7 @@ public class User {
     }
 
     public boolean isEqual(User user) {
-        if (user.id == id) {
-            return true;
-        }
-        return false;
+        int userId = user.getId();
+        return userId == id;
     }
 }

@@ -17,14 +17,14 @@ public class App {
 
 // Сравниваем пользователя user1 с другим пользователем user2
 // Так как идентификаторы совпадают, это один и тот же пользователь
-        user1.isEqual(user2); // true
+        //user1.isEqual(user2); // true
 
 // У пользователя другой id
-        var user3 = new User(14, "Nick12");
+        var user3 = new User(1, "Nick12");
 
-        user1.isEqual(user3); // false
+        //user1.isEqual(user3); // false
 
-        System.out.println(user1.isEqual(user2));
+        System.out.println(user1.isEqual(user3));
 
 
     }
