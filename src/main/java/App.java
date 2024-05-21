@@ -13,7 +13,7 @@ public class App {
         var user1 = new User(1, "Nick12");
 
 // Другой пользователь с такими же id
-        var user2 = new User(1, "Nick");
+        var user2 = new User(2, "Nick");
 
 // Сравниваем пользователя user1 с другим пользователем user2
 // Так как идентификаторы совпадают, это один и тот же пользователь
@@ -24,7 +24,7 @@ public class App {
 
         user1.isEqual(user3); // false
 
-        System.out.println(user1.isEqual(user3));
+        System.out.println(user1.isEqual(user2));
 
 
     }
