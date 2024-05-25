@@ -18,8 +18,8 @@ import java.util.Arrays;
 NB метод Arrays.copyOf() позволяет скопировать первые несколько элементов массива*/
 public class App {
     public static void main(String[] args) {
-        int[] numbers1 = {10, 11, 24};
-        int[] numbers2 = {10, 13, 14, 18, 24, 30};
+        int[] numbers1 = {10, 11, 24, 24};
+        int[] numbers2 = {10, 13, 14, 18, 24, 24, 30};
         var result1 = App.getIntersectionOfSortedArrays(numbers1, numbers2);
         System.out.println(Arrays.toString(result1)); // => [10, 24]
 
@@ -30,23 +30,22 @@ public class App {
     }
 
     public static int[] getIntersectionOfSortedArrays(int[] numbers1, int[] numbers2) {
-        int resultLength = Math.max(numbers1.length, numbers2.length);
-        int[] result;
-        //int cutResultIndex = ArrayUtils.indexOf(result, 0);
+        int[] result = new int[0];
         int index1 = 0;
         int index2 = 0;
-            for (int i = 0; i < resultLength ; i++) {
-                if (numbers1[index1] == numbers2[index2]) {
-                    result[i] = numbers1[index1];
-                    index1++;
-                    index2++;
-                } else if (numbers1[index1] > numbers2[index2]) {
-                    index1++;
-                } else {
-                    index2++;
-                }
+        int resultIndex = 0;
+        while (index1 < numbers1.length && index2 < numbers2.length) {
+            if (numbers1[index1] == numbers2[index2] && (resultIndex == 0 || result[resultIndex - 1] != numbers1[index1])) {
+                result = ArrayUtils.add(result, numbers1[index1]);
+                index1++;
+                index2++;
+                resultIndex++;
+            } else if (numbers1[index1] > numbers2[index2]) {
+                index2++;
+            } else {
+                index1++;
             }
-
-        return result;//Arrays.copyOfRange(result, 0, cutResultIndex);
+        }
+        return result;
     }
 }
