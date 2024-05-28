@@ -2,30 +2,58 @@ import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.Arrays;
 
-/*Реализуйте в классе метод isEqual().
-Метод сравнивает текущего пользователя (того, на котором мы вызываем этот метод)
-с другим пользователем (переданным в метод в качестве параметра).
-Сравнение пользователей происходит на основе их идентификаторов.
-Если идентификаторы пользователей равны, то это один и тот же пользователь и метод isEqual() должен вернуть true.
-В другом случае метод должен вернуть false.*/
+/*В классе App реализуйте публичный статический метод calculateAverage(), который принимает в качестве параметра массив целых чисел.
+Метод должен вернуть среднее арифметическое значение всех чисел в массиве, число типа Double.
+Так как предполагается, что данные в массиве мы получили от пользователей, на их надежность полагаться не стоит.
+На вход метода может прийти пустой массив, или массив, содержащий значения null.
+В этом случае вычислить среднее значение невозможно и метод должен вернуть null*/
 public class App {
     public static void main(String[] args) {
-        var user1 = new User(1, "Nick12");
+        int[] numbers = {5, 8 ,2, 4, 7, 1, 6, 9, 3};
+        Integer[] num1 = new Integer[] {1, 2, 3, 4}; // 2.5
+        Integer[] num2 = new Integer[] {}; // null
+        Integer[] num3 = new Integer[] {1, 2, 3, 4, null}; // null
 
-// Другой пользователь с такими же id
-        var user2 = new User(2, "Nick");
-
-// Сравниваем пользователя user1 с другим пользователем user2
-// Так как идентификаторы совпадают, это один и тот же пользователь
-        //user1.isEqual(user2); // true
-
-// У пользователя другой id
-        var user3 = new User(1, "Nick12");
-
-        //user1.isEqual(user3); // false
-
-        System.out.println(user1.isEqual(user3));
-
-
+        System.out.println(calculateAverage(num1));
+        System.out.println(calculateAverage(num2));
+        System.out.println(calculateAverage(num3));
     }
+
+    /*public static Double calculateAverage(Integer[] num) {
+        Integer[] clearNum = ArrayUtils.removeAllOccurrences(num, null);
+        double length = clearNum.length;
+        double sum = 0.0;
+        if (length == 0) {
+            return null;
+        }
+        for (Integer givenNUmber : clearNum) {
+            if (givenNUmber != null)
+                sum += givenNUmber;
+        }
+        return sum / length;
+
+    }*/
+    public static Double calculateAverage(Integer[] numbers) {
+
+        var length = numbers.length;
+
+        if (length == 0) {
+            return null;
+        }
+
+        var sum = 0.0;
+
+        for (var num : numbers) {
+
+            if (num == null) {
+                return null;
+            }
+
+            sum += num;
+        }
+
+        return sum / length;
+    }
+
+
 }
