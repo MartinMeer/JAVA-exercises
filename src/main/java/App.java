@@ -7,21 +7,14 @@ import java.io.IOException;
 
 public class App {
     public static void main (String[] args) {
-        Rectangle rectangle = new Rectangle(-5,10);
-        Rectangle rectangle1 = new Rectangle(5,10);
-        Rectangle rectangle2 = new Rectangle(6,10);
-        printSquare(rectangle);
-        printSquare(rectangle1);
-        printSquare(rectangle2);
+        var quadrate = new Quadrate(3);
+        var enlargedQuadrate = App.enlargeQuadrate(quadrate);
+        System.out.println(enlargedQuadrate.getSide()); // 6
     }
 
 
-    public static void printSquare(Rectangle figure) throws RuntimeException {
-        try {
-            System.out.println(figure.getSquare());
-        } catch (RuntimeException e) {
-            System.out.println("Не удалось посчитать площадь");
-        }
+    public static Quadrate enlargeQuadrate(Quadrate figure) {
+        return new Quadrate(figure.getSide() * 2);
     }
 
 
