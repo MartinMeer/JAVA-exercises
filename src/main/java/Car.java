@@ -1,7 +1,10 @@
+import lombok.ToString;
+
 import java.util.Objects;
 
 /*В классе Car переопределите методы equals() и hashCode() так, чтобы сравнение двух объектов класса Car происходило по содержимому.
 Считаем, что автомобили идентичны, если у них совпадают марка, модель и год выпуска.*/
+@ToString
 public class Car {
 
     private String made;

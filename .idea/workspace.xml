@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat: Override equals() &amp; hashcode()">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
+    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat: contains Car">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="classes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -163,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717345644611</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: contains Car">
+      <option name="closed" value="true" />
+      <created>1717362210219</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717362210219</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +206,7 @@
     <MESSAGE value="feat: getWordCount" />
     <MESSAGE value="feat: Book" />
     <MESSAGE value="feat: Override equals() &amp; hashcode()" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Override equals() &amp; hashcode()" />
+    <MESSAGE value="feat: contains Car" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: contains Car" />
   </component>
 </project>

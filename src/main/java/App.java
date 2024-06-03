@@ -1,6 +1,8 @@
+import lombok.ToString;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.Arrays;
+
 
 /*В классе App создайте публичный статический метод contains(), который принимает два параметра:
 Каталог автомобилей — массив Car[]
@@ -22,7 +24,7 @@ public class App {
 
         System.out.println(Arrays.toString(cars) + "\n" + car1 + "\n" + car2 + "\n" + car3 + "\n" + car4);
         System.out.println(contains(cars, car4));
-        System.out.println(containsAU(cars, car4));
+        System.out.println(car4);
 
     }
 
