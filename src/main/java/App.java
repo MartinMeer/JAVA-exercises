@@ -1,29 +1,31 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/*У списков в Java есть метод get(), который возвращает элемент списка по указанному индексу.
-А в случае, если такого индекса нет, выбрасывает исключение.
-Вам предстоит создать свой собственный вариант такого метода, но с небольшим отличием в поведении
-
-В классе App реализуйте публичный статический метод getOrDefault(), который принимает на вход три параметра:
-- исходная коллекция элементов, список строк List<String>
-- индекс элемента, который мы хотим получить, целое число
-- дефолтное значение, строка
-
-Метод должен вернуть элемент списка по указанному индексу.
-Но, в отличие от стандартного метода списков, в случае, если такого индекса нет, наш метод должен вернуть дефолтное значение, а не выбрасывать исключение*/
+/*В классе App реализуйте публичный статический метод replaceByZero(), который принимает в качестве парамера список List целых чисел.
+Метод должен вернуть новый список, в котором все отрицательные числа заменены на нули. Метод не должен менять исходный список*/
 public class App {
     public static void main(String[] args) {
-        List<String> items = List.of("Mercury", "Venus", "Earth", "Mars");
-        List<String> newList = new ArrayList<>(items);
-        System.out.println(getOrDefault(newList, 6, "Element does not exist!"));
+        List<Integer> items = List.of(1, 2, -3, -6, -10, 555);
+        ArrayList<Integer> testList = new ArrayList<>(items);
+        System.out.println(replaceByZero(testList));
+
+
+
+
     }
 
-    public static String getOrDefault(List<String> list, int index, String defaultStr) {
-        if (index < 0 || index >= list.size()) {
-            return defaultStr;
+    public static List<Integer> replaceByZero(List<Integer> items) {
+        List<Integer> replacedNumbers = new ArrayList<>();
+        for (Integer givenEl : items) {
+            if (givenEl < 0) {
+            replacedNumbers.add(0);
+            } else {
+            replacedNumbers.add(givenEl);
+            }
         }
-        return list.get(index);
+        return replacedNumbers;
     }
+
+
 
 }
