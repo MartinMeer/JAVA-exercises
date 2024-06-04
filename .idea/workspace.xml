@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat:  make DTO class CustomerDTO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProductsStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-    </list>
+    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat:  checking invariants" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717512728883</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat:  checking invariants">
+      <option name="closed" value="true" />
+      <created>1717516688442</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717516688442</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +246,7 @@
     <MESSAGE value="feat: contains Car v2" />
     <MESSAGE value="feat: add Lombok &amp; class Film" />
     <MESSAGE value="feat:  make DTO class CustomerDTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:  make DTO class CustomerDTO" />
+    <MESSAGE value="feat:  checking invariants" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:  checking invariants" />
   </component>
 </project>
