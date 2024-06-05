@@ -1,30 +1,41 @@
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-/*В классе App реализуйте публичный статический метод replaceByZero(), который принимает в качестве парамера список List целых чисел.
-Метод должен вернуть новый список, в котором все отрицательные числа заменены на нули. Метод не должен менять исходный список*/
+/*у нас есть список пользователей,
+из которого мы хотим получить список возрастов этих пользователей для каких-то дальнейших вычислений или формирования данных по запросу.*/
 public class App {
+
     public static void main(String[] args) {
-        List<Integer> items = List.of(1, 2, -3, -6, -10, 555);
-        ArrayList<Integer> testList = new ArrayList<>(items);
-        System.out.println(replaceByZero(testList));
+        User user1 = new User(LocalDate.of(2000, 1, 6));
 
+        List<User> users = List.of(
+                user1,
+                new User(LocalDate.of(1999, 1, 1)),
+                new User(LocalDate.of(2010, 5, 8)),
+                new User(LocalDate.of(2008, 10, 11))
+        );
 
+        LocalDate currentDate = LocalDate.now();
+        LinkedList<Integer> ages = new LinkedList<>();
 
-
-    }
-
-    public static List<Integer> replaceByZero(List<Integer> items) {
-        List<Integer> replacedNumbers = new ArrayList<>();
-        for (Integer givenEl : items) {
-            if (givenEl < 0) {
-            replacedNumbers.add(0);
-            } else {
-            replacedNumbers.add(givenEl);
-            }
+        for (User givenUser : users) {
+            Period fullAge = Period.between(givenUser.getBirthday(), currentDate);
+            Integer age = fullAge.getYears();
+            ages.add(age);
         }
-        return replacedNumbers;
+
+        System.out.println(ages);
+
+
+
+
+
+
     }
+
 
 
 
