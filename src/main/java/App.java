@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
-        User user1 = new User(LocalDate.of(2000, 1, 6));
+        User user1 = new User(LocalDate.of(1979, 3, 27));
 
         List<User> users = List.of(
                 user1,
@@ -28,6 +29,18 @@ public class App {
         }
 
         System.out.println(ages);
+
+        /*сформировать список пользователей, которые родились после 2000 года.*/
+
+        Year year = Year.of(2000);
+        LinkedList<User> millenials = new LinkedList<>();
+
+        for (User givenUser : users) {
+            if (givenUser.getBirthday().getYear() > 2000) {
+                millenials.add(givenUser);
+            }
+        }
+        System.out.println(millenials.size());
 
 
 
