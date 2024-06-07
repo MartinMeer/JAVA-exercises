@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,50 +10,59 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
-        User user1 = new User(LocalDate.of(2000, 1, 6));
 
-        List<User> users = List.of(
-                user1,
-                new User(LocalDate.of(1999, 1, 1)),
-                new User(LocalDate.of(2010, 5, 8)),
-                new User(LocalDate.of(2008, 10, 11))
-        );
+        ArrayList<String> items = new ArrayList<>();
+        items.add("java");
+        items.add("python");
+        items.add("C++");
+        items.add("kotlin");
+        items.add("scala");
+        ArrayList<String> copyOf = new ArrayList<>(items);
 
+        System.out.println(items);
+        System.out.println(copyOf);
+
+        items.set(2, "C#");
+
+        System.out.println(items);
+        System.out.println(copyOf);
+
+        User user1 = new User(LocalDate.of(1979,3,27), "Oleg");
+        User user2 = new User(LocalDate.of(1979,3,27), "Oleg");
+
+
+        ArrayList<User> users = new ArrayList<>();
+        users.add(user1);
+        users.add(new User(LocalDate.of(2111,1,1), "&"));
+        users.add(new User(LocalDate.of(2020,4,28), "Maya"));
+        users.add(new User(LocalDate.of(2006,12,22), "Victoria"));
+
+        ArrayList<User> copyOfUsers = new ArrayList<>(users);
 
         System.out.println(users);
+        System.out.println(copyOfUsers);
 
-        LocalDate currentDate = LocalDate.now();
-        LinkedList<Integer> ages = new LinkedList<>();
+        user1.setName("Nobody");
 
-        for (User givenUser : users) {
-            Period fullAge = Period.between(givenUser.getBirthday(), currentDate);
-            Integer age = fullAge.getYears();
-            ages.add(age);
-        }
+        System.out.println(users);
+        System.out.println(copyOfUsers);
 
-        System.out.println(ages);
+        users.get(1).setName("Nobody");
 
-        List<Book> books = List.of(
-                new Book("Death on the Nile", "Agatha Christie", "Detective"),
-                new Book("Murder on the Orient Express", "Agatha Christie", "Detective"),
-                new Book("The Raven", "Edgar Allan Poe", "Poem")
-                );
+        System.out.println(users.get(1).getName());
+        System.out.println(copyOfUsers.get(1).getName());
 
-        System.out.println(countBooks(books, "Agatha Christie", "Detective"));
+        users.set(1, user2);
+
+        System.out.println(users);
+        System.out.println(copyOfUsers);
+
+
+
+
+
+
+
+
     }
-/*Метод должен вернуть общее количество книг в библиотеке, написанных нашим автором в определенном жанре*/
-    private static int countBooks(List<Book> books, String authorName, String genre) {
-        int result = 0;
-        ArrayList<Book> booksOfAuthor = new ArrayList<>();
-        for (Book givenBook : books) {
-            var author = givenBook.getAuthorName();
-            var genre1 = givenBook.getGenre();
-            if (author.equals(authorName) && genre1.equals(genre)) {
-                result++;
-            }
-        }
-        return result;
-    }
-
-
 }

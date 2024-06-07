@@ -1,25 +1,17 @@
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Locale;
 
-
+@AllArgsConstructor
+@Getter
+@Setter
 public class User {
     private LocalDate birthday;
-    private List<User> friends;
+    private String name;
 
-    public User(LocalDate birthday) {
-        this.birthday = birthday;
-    }
 
-    public void setFriends(List<User> friends) {
-        this.friends = friends;
-    }
-
-    public List<User> getFriends() {
-        return friends;
-    }
-
-    public LocalDate getBirthday() {
-        return birthday;
-    }
 }
