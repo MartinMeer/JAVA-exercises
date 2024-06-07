@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,7 +9,7 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
-        User user1 = new User(LocalDate.of(1979, 3, 27));
+        User user1 = new User(LocalDate.of(2000, 1, 6));
 
         List<User> users = List.of(
                 user1,
@@ -18,6 +17,9 @@ public class App {
                 new User(LocalDate.of(2010, 5, 8)),
                 new User(LocalDate.of(2008, 10, 11))
         );
+
+
+        System.out.println(users);
 
         LocalDate currentDate = LocalDate.now();
         LinkedList<Integer> ages = new LinkedList<>();
@@ -30,26 +32,27 @@ public class App {
 
         System.out.println(ages);
 
-        /*сформировать список пользователей, которые родились после 2000 года.*/
+        List<Book> books = List.of(
+                new Book("Death on the Nile", "Agatha Christie", "Detective"),
+                new Book("Murder on the Orient Express", "Agatha Christie", "Detective"),
+                new Book("The Raven", "Edgar Allan Poe", "Poem")
+                );
 
-        Year year = Year.of(2000);
-        LinkedList<User> millenials = new LinkedList<>();
-
-        for (User givenUser : users) {
-            if (givenUser.getBirthday().getYear() > 2000) {
-                millenials.add(givenUser);
+        System.out.println(countBooks(books, "Agatha Christie", "Detective"));
+    }
+/*Метод должен вернуть общее количество книг в библиотеке, написанных нашим автором в определенном жанре*/
+    private static int countBooks(List<Book> books, String authorName, String genre) {
+        int result = 0;
+        ArrayList<Book> booksOfAuthor = new ArrayList<>();
+        for (Book givenBook : books) {
+            var author = givenBook.getAuthorName();
+            var genre1 = givenBook.getGenre();
+            if (author.equals(authorName) && genre1.equals(genre)) {
+                result++;
             }
         }
-        System.out.println(millenials.size());
-
-
-
-
-
-
+        return result;
     }
-
-
 
 
 }
