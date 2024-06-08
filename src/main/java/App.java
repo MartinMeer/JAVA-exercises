@@ -1,68 +1,30 @@
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.Year;
-import java.util.ArrayList;
-import java.util.LinkedList;
+import org.apache.commons.collections4.CollectionUtils;
+
+import java.util.Collections;
 import java.util.List;
 
-/*у нас есть список пользователей,
-из которого мы хотим получить список возрастов этих пользователей для каких-то дальнейших вычислений или формирования данных по запросу.*/
+
+/*В классе App реализуйте публичный статический метод getCommonFriends(), который находит общих друзей у двух пользователей.
+Метод принимает два параметра - пользователей, у которых мы ищем общих друзей
+Метод должен вернуть список List<User> друзей, которые являются общими для двух переданных пользователей*/
 public class App {
 
     public static void main(String[] args) {
+        var user1 = new User("John");
+        user1.addFriend(new User("Ellery"));
 
-        ArrayList<String> items = new ArrayList<>();
-        items.add("java");
-        items.add("python");
-        items.add("C++");
-        items.add("kotlin");
-        items.add("scala");
-        ArrayList<String> copyOf = new ArrayList<>(items);
+        var user2 = new User("Anna");
+        user2.addFriend(new User("Abey"));
 
-        System.out.println(items);
-        System.out.println(copyOf);
+// Общий друг двух пользователей
+        var friend = new User("Jacky");
+        user1.addFriend(friend);
+        user2.addFriend(friend);
 
-        items.set(2, "C#");
-
-        System.out.println(items);
-        System.out.println(copyOf);
-
-        User user1 = new User(LocalDate.of(1979,3,27), "Oleg");
-        User user2 = new User(LocalDate.of(1979,3,27), "Oleg");
-
-
-        ArrayList<User> users = new ArrayList<>();
-        users.add(user1);
-        users.add(new User(LocalDate.of(2111,1,1), "&"));
-        users.add(new User(LocalDate.of(2020,4,28), "Maya"));
-        users.add(new User(LocalDate.of(2006,12,22), "Victoria"));
-
-        ArrayList<User> copyOfUsers = new ArrayList<>(users);
-
-        System.out.println(users);
-        System.out.println(copyOfUsers);
-
-        user1.setName("Nobody");
-
-        System.out.println(users);
-        System.out.println(copyOfUsers);
-
-        users.get(1).setName("Nobody");
-
-        System.out.println(users.get(1).getName());
-        System.out.println(copyOfUsers.get(1).getName());
-
-        users.set(1, user2);
-
-        System.out.println(users);
-        System.out.println(copyOfUsers);
-
-
-
-
-
-
-
-
+        List<User> commonFriends = App.getCommonFriends(user1, user2);
+        System.out.println(commonFriends); // => ["Jacky"]
+    }
+    public static List<User> getCommonFriends(User user1, User user2) {
+        return (List<User>) CollectionUtils.intersection(user1.getFriends(), user2.getFriends());
     }
 }
