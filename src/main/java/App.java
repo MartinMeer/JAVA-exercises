@@ -1,30 +1,34 @@
 import org.apache.commons.collections4.CollectionUtils;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 
-/*В классе App реализуйте публичный статический метод getCommonFriends(), который находит общих друзей у двух пользователей.
-Метод принимает два параметра - пользователей, у которых мы ищем общих друзей
-Метод должен вернуть список List<User> друзей, которые являются общими для двух переданных пользователей*/
+/*Метод должен вернуть список строк - названий автомобилей, выпущенных до указанного года.
+Каждое название - это марка + модель, например "Jaguar XK120".
+Список должен быть отсортирован по названиям автомобилей в прямом порядке без учета регистра*/
 public class App {
 
     public static void main(String[] args) {
-        var user1 = new User("John");
-        user1.addFriend(new User("Ellery"));
+        var cars = List.of(
+                new Car("Jaguar", "XK120", LocalDate.of(1950, 8, 21)),
+                new Car("Mercedes-Benz", "W114", LocalDate.of(1968, 7, 10)),
+                new Car("Fiat", "600", LocalDate.of(1956, 1, 1))
+        );
 
-        var user2 = new User("Anna");
-        user2.addFriend(new User("Abey"));
-
-// Общий друг двух пользователей
-        var friend = new User("Jacky");
-        user1.addFriend(friend);
-        user2.addFriend(friend);
-
-        List<User> commonFriends = App.getCommonFriends(user1, user2);
-        System.out.println(commonFriends); // => ["Jacky"]
+        var result = App.getCars(cars, 1960);
+        System.out.println(result); // => [Fiat 600, Jaguar XK120]
     }
-    public static List<User> getCommonFriends(User user1, User user2) {
-        return (List<User>) CollectionUtils.intersection(user1.getFriends(), user2.getFriends());
+    public static List<String> getCars(List<Car> cars, int year) {
+        List<String> manufacturedBeforeYear = new ArrayList<>();
+        for (Car givenCar : cars) {
+            if (givenCar.getManufacturedAt().getYear() < year) {
+                manufacturedBeforeYear.add(String.valueOf(givenCar));
+            }
+        }
+        Collections.sort(manufacturedBeforeYear, String.CASE_INSENSITIVE_ORDER);
+        return manufacturedBeforeYear;
     }
 }
