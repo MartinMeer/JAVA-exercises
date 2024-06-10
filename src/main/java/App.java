@@ -1,35 +1,41 @@
 
-import org.apache.commons.lang3.ArrayUtils;
-
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
-/*Реализуйте публичный статический метод getPriceWithDiscount(),
-который возвращает цену товара с учетом скидки. Метод принимает два параметра:
-    - Карта сегодняшних скидок, Map<String, Double>.
-Ключ в этой карте - название товара, а значение - скидка на него в процентах
-    - Название товара, цену на который мы ищем
-Метод должен найти товар в каталоге products и вернуть число типа Double - цену на товар с учетом скидки.
-Если товара в каталоге нет, должно вернуться null. Если в карте сегодняшних скидок нет такого товара,
-должна вернуться полная цена из каталога*/
+import java.util.Set;
+
+/*В классе App реализуйте публичный статический метод getMostPopulatedCity(),
+который находит среди всех городов самый густонаселенный.
+Метод принимает в качестве параметра перечень городов Map<String, Integer>,
+где ключ - это название города, а значение - его население.
+Метод должен вернуть строку, название города с максимальным населением*/
 public class App {
 
-    private static Map<String, Double> products = Data.getProducts();;
-
     public static void main(String[] args) {
-        Map<String, Double> products = Data.getProducts();
+        Map<String, Integer> cities = Map.of(
+                "White River", 114958,
+                "Kashmor", 210451,
+                "Oxford", 152450
+                );
 
-        var discounts = Map.of(
-                "Coffee", 10.0,
-                "Shrimp", 10.0
-        );
-
-        System.out.println(getPriceWithDiscount(discounts, "Salmon"));
+        System.out.println(getMostPopulatedCity(cities)); // Kashmor
     }
-    public static Double getPriceWithDiscount(Map<String, Double> discounts, String product) {
-            if (!App.products.containsKey(product)) {
-                return null;
+
+    public static String getMostPopulatedCity(Map<String, Integer> cities) {
+        if (cities.isEmpty()) {
+            return null;
+        }
+        LinkedList<Integer> citiesByValues = new LinkedList<>(cities.values());
+        Collections.sort(citiesByValues);
+        Integer firstCity = citiesByValues.getLast();
+        for (Map.Entry<String, Integer> entry : cities.entrySet()) {
+            if (entry.getValue().equals(firstCity)) {
+                return entry.getKey();
             }
-        double productPrice = App.products.get(product);
-        double discount = discounts.getOrDefault(product, 0.0);
-            return productPrice - ((productPrice * discount) / 100);
+        }
+        return null;
     }
 }
