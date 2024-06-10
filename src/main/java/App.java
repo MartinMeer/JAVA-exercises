@@ -1,68 +1,35 @@
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.Year;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
-/*у нас есть список пользователей,
-из которого мы хотим получить список возрастов этих пользователей для каких-то дальнейших вычислений или формирования данных по запросу.*/
+import org.apache.commons.lang3.ArrayUtils;
+
+import java.util.Map;
+/*Реализуйте публичный статический метод getPriceWithDiscount(),
+который возвращает цену товара с учетом скидки. Метод принимает два параметра:
+    - Карта сегодняшних скидок, Map<String, Double>.
+Ключ в этой карте - название товара, а значение - скидка на него в процентах
+    - Название товара, цену на который мы ищем
+Метод должен найти товар в каталоге products и вернуть число типа Double - цену на товар с учетом скидки.
+Если товара в каталоге нет, должно вернуться null. Если в карте сегодняшних скидок нет такого товара,
+должна вернуться полная цена из каталога*/
 public class App {
 
+    private static Map<String, Double> products = Data.getProducts();;
+
     public static void main(String[] args) {
+        Map<String, Double> products = Data.getProducts();
 
-        ArrayList<String> items = new ArrayList<>();
-        items.add("java");
-        items.add("python");
-        items.add("C++");
-        items.add("kotlin");
-        items.add("scala");
-        ArrayList<String> copyOf = new ArrayList<>(items);
+        var discounts = Map.of(
+                "Coffee", 10.0,
+                "Shrimp", 10.0
+        );
 
-        System.out.println(items);
-        System.out.println(copyOf);
-
-        items.set(2, "C#");
-
-        System.out.println(items);
-        System.out.println(copyOf);
-
-        User user1 = new User(LocalDate.of(1979,3,27), "Oleg");
-        User user2 = new User(LocalDate.of(1979,3,27), "Oleg");
-
-
-        ArrayList<User> users = new ArrayList<>();
-        users.add(user1);
-        users.add(new User(LocalDate.of(2111,1,1), "&"));
-        users.add(new User(LocalDate.of(2020,4,28), "Maya"));
-        users.add(new User(LocalDate.of(2006,12,22), "Victoria"));
-
-        ArrayList<User> copyOfUsers = new ArrayList<>(users);
-
-        System.out.println(users);
-        System.out.println(copyOfUsers);
-
-        user1.setName("Nobody");
-
-        System.out.println(users);
-        System.out.println(copyOfUsers);
-
-        users.get(1).setName("Nobody");
-
-        System.out.println(users.get(1).getName());
-        System.out.println(copyOfUsers.get(1).getName());
-
-        users.set(1, user2);
-
-        System.out.println(users);
-        System.out.println(copyOfUsers);
-
-
-
-
-
-
-
-
+        System.out.println(getPriceWithDiscount(discounts, "Salmon"));
+    }
+    public static Double getPriceWithDiscount(Map<String, Double> discounts, String product) {
+            if (!App.products.containsKey(product)) {
+                return null;
+            }
+        double productPrice = App.products.get(product);
+        double discount = discounts.getOrDefault(product, 0.0);
+            return productPrice - ((productPrice * discount) / 100);
     }
 }
