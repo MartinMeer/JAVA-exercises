@@ -10,6 +10,8 @@ public class WordCounter {
         HashMap<String, Integer> wordWithCount = new HashMap<>();
         String[] words = str.toLowerCase().split("[\\s!#$%&'()*+,-./:;<=>?@^_`{|}~]");
         for (String word : words) {
+            int counter = wordWithCount.getOrDefault(word, 0);
+            wordWithCount.put(word, counter + 1);
 
         }
         wordWithCount.remove("");

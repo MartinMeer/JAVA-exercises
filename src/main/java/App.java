@@ -8,8 +8,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        String sentence = "Сколько раз в этом предложении встречается слово раз, и слово сколько, и слово слово?!";
-        System.out.println(WordCounter.wordsCounter(sentence));
+        String text = "Сколько раз в этом предложении встречается слово раз, и слово сколько, и слово слово?!";
+        System.out.println(WordCounter.wordsCounter(text));
     }
 
 }
