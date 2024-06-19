@@ -32,4 +32,15 @@ public class ListUtils<T> {
         };
         return filteredList;
     }
+
+    public static <T extends Human> int findFirstIndex(List<T> elements, String index) {
+        int indexLength = index.length();
+        for (T element : elements) {
+            String elementName = element.getName();
+            if (elementName.substring(0, indexLength).equals(index)) {
+                return elements.indexOf(element);
+            }
+        }
+        return -1;
+    }
 }

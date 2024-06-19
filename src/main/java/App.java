@@ -1,6 +1,12 @@
-/*В классе App реализуйте публичный статический метод sortBooks(),
-который принимает на вход список книг List<Book> и сортирует его по названию книги в обратном порядке.
-Метод должен вернуть новый список*/
+/*В классе ListUtils создайте обобщенный статический метод findFirstIndex(),
+который на вход принимает список List неизвестного типа.
+Единственное, что известно о типе в списке это то, что он всегда будет унаследован от класса Human.
+
+Метод принимает на вход два параметра:
+    - humans - лист неизвестного типа
+    - namePrefix - префикс имени для поиска
+Метод ищет в списке первого человека, у которого имя начинается с заданного префикса и возвращает его индекс.
+В случае если ни одного такого человека нет, нужно вернуть значение -1*/
 
 
 import java.util.ArrayList;
@@ -8,15 +14,18 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        var fruits = new ArrayList<>(List.of("apple", "lemon", "pear", "avocado", "mango"));
-        ListUtils.filter(fruits, e -> e.startsWith("a"));
-        System.out.println(fruits);
-        var numbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6, 8));
-        ListUtils.filter(numbers, e -> e % 2 == 0);
-        System.out.println(numbers);
 
-        var numbers1 = new ArrayList<>(List.of(1.5, 2.3, 15.8, 10.2, 0.5));
-        ListUtils.filter(numbers1, e -> e > 10.1);
-        System.out.println(numbers1);
+        var people = new ArrayList<>(List.of(
+                new Man("Oleg"),
+                new Woman("Olga"),
+                new Man("German"),
+                new Woman("Eugenia")
+        ));
+
+        System.out.println(ListUtils.findFirstIndex(people, "G")); // 1
+        System.out.println(ListUtils.findFirstIndex(people, "Ol")); // 1
+        System.out.println(ListUtils.findFirstIndex(people, "F")); // -1
+
+
     }
 }
