@@ -1,12 +1,5 @@
-/*В классе ListUtils создайте обобщенный статический метод findFirstIndex(),
-который на вход принимает список List неизвестного типа.
-Единственное, что известно о типе в списке это то, что он всегда будет унаследован от класса Human.
-
-Метод принимает на вход два параметра:
-    - humans - лист неизвестного типа
-    - namePrefix - префикс имени для поиска
-Метод ищет в списке первого человека, у которого имя начинается с заданного префикса и возвращает его индекс.
-В случае если ни одного такого человека нет, нужно вернуть значение -1*/
+/*В классе App реализуйте публичный статический метод sortWords(), который сортирует список List строк.
+Метод должен вернуть новый список, строки в котором отсортированы в алфавитном порядке. Используйте в реализации стримы*/
 
 
 import java.util.ArrayList;
@@ -15,17 +8,14 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
 
-        var people = new ArrayList<>(List.of(
-                new Man("Oleg"),
-                new Woman("Olga"),
-                new Man("German"),
-                new Woman("Eugenia")
-        ));
-
-        System.out.println(ListUtils.findFirstIndex(people, "G")); // 1
-        System.out.println(ListUtils.findFirstIndex(people, "Ol")); // 1
-        System.out.println(ListUtils.findFirstIndex(people, "F")); // -1
-
-
+        var fruits = List.of("lemon", "apple", "banana");
+        var result = App.sortWords(fruits);
+        System.out.println(result); // => [apple, banana, lemon]
+    }
+    public static List<String> sortWords(List<String> words) {
+        var stream = words.stream()
+                .sorted()
+                .toList();
+        return stream;
     }
 }
