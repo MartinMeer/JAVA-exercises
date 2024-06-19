@@ -24,12 +24,12 @@ public class ListUtils<T> {
         return copyList;
     }*/
     public static <P extends Number> List<P> filter(List<P> list, Predicate<P> p) {
-        ArrayList<P> filteredList = new ArrayList<>(list);
-        filteredList.forEach(a -> {
-            if (!(p.test(a))) {
-                filteredList.remove(a);
+        ArrayList<P> filteredList = new ArrayList<>();
+        for (P element : list) {
+            if ((p.test(element))) {
+                filteredList.add(element);
             }
-        });
+        };
         return filteredList;
     }
 }
