@@ -11,39 +11,33 @@ import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) {
-        var people = new ArrayList(
-                List.of(
-                        new Person("John", 17),
-                        new Person("Anna", 24),
-                        new Person("Alex", 57),
-                        new Person("Jun", 32)
-                )
+        var products = List.of(
+                new Product("Smartphone", "electronics", 500),
+                new Product("Laptop", "electronics", 1000),
+                new Product("Headphones", "electronics", 100),
+                new Product("Smart Watch", "electronics", 300),
+                new Product("T-Shirt", "cloth", 20),
+                new Product("Sneakers", "shoes", 100),
+                new Product("Coffee Machine", "kitchen", 200),
+                new Product("Sunglasses", "accessories", 50),
+                new Product("Book", "books", 15),
+                new Product("Gaming Console", "electronics", 400)
         );
 
-        System.out.println(App.getAverageAge(people)); // 32.5
-
-
+        System.out.println(App.getTotalPrice(products)); // 2300
 
     }
-    /*В классе App реализуйте публичный статический метод getAverageAge(),
-    который принимает в качестве параметра группу людей — список List<Person>.
-    Метод должен вернуть средний возраст людей в нашей группе в виде числа типа Double.
-    Если передан пустой список, метод должен вернуть null*/
 
-    public static Double getAverageAge(List<Person> persons) {
-        if (persons.isEmpty()) {
-            return null;
+    /*принимает в качестве параметра список товаров на складе List<Product>.
+    Метод должен вернуть общую стоимость всех товаров из категории Электроника (electronics) на складе (число типа int)*/
+    public static int getTotalPrice(List<Product> products) {
+        if (products.isEmpty()) {
+            return 0;
         }
-        var sumStream = persons.stream()
-                .reduce(0.0, (sum, person) -> sum + person.getAge(), Double::sum);
-        //double avg = sumStream.doubleValue();
-        return sumStream / persons.size();
-
-
-
-
-
-
+        return products.stream()
+                .filter(product -> product.getCategory().equals("electronics"))
+                .map(Product::getPrice)
+                .reduce(0, Integer::sum);
     }
 
 
