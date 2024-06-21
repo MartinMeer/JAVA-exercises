@@ -1,44 +1,55 @@
-/*публичный статический метод normalize(), который будет выполнять нормализацию.
-Метод принимает в качестве параметра список List email-адресов и возвращает новый список, в котором каждый email нормализован.
-Нормализация заключается в удалении концевых пробелов и приведении адреса к нижнему регистру*/
-
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+
 public class App {
+    private static final List<String> FREE_DOMAINS = List.of(
+            "gmail.com",
+            "yandex.ru",
+            "hotmail.com",
+            "yahoo.com"
+    );
     public static void main(String[] args) {
-        var products = List.of(
-                new Product("Smartphone", "electronics", 500),
-                new Product("Laptop", "electronics", 1000),
-                new Product("Headphones", "electronics", 100),
-                new Product("Smart Watch", "electronics", 300),
-                new Product("T-Shirt", "cloth", 20),
-                new Product("Sneakers", "shoes", 100),
-                new Product("Coffee Machine", "kitchen", 200),
-                new Product("Sunglasses", "accessories", 50),
-                new Product("Book", "books", 15),
-                new Product("Gaming Console", "electronics", 400)
+        var emails = List.of(
+                "info@yandex.ru",
+                "mk@host.com",
+                "support@hexlet.io",
+                "sergey@gmail.com",
+                "vovan@gmail.com",
+                "vovan@hotmail.com"
         );
 
-        System.out.println(App.getTotalPrice(products)); // 2300
+        var result = App.getFreeDomainsCount(emails);
+        System.out.println(result); // => {gmail.com=2, yandex.ru=1, hotmail.com=1}
+    }
+
+    /*публичный статический метод getFreeDomainsCount(), который принимает на вход список емейлов List<String>.
+    Метод должен вернуть Map<String, Long> — количество email, расположенных на каждом бесплатном домене.
+    Список бесплатных доменов хранится в константе FREE_DOMAINS*/
+
+    public static Map<String, Long> getFreeDomainsCount(List<String> emails) {
+        var freeDomains = emails.stream()
+                .map(email -> email.split("@")[1])
+                .filter(domain -> FREE_DOMAINS.contains(domain))
+                .collect(Collectors.groupingBy(domain -> domain, Collectors.counting()));
+        return freeDomains;
+
 
     }
 
-    /*принимает в качестве параметра список товаров на складе List<Product>.
-    Метод должен вернуть общую стоимость всех товаров из категории Электроника (electronics) на складе (число типа int)*/
-    public static int getTotalPrice(List<Product> products) {
-        if (products.isEmpty()) {
-            return 0;
-        }
-        return products.stream()
-                .filter(product -> product.getCategory().equals("electronics"))
-                .map(Product::getPrice)
-                .reduce(0, Integer::sum);
-    }
+
+
+
+
+
+
+
 
 
 
