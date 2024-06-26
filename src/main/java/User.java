@@ -3,14 +3,21 @@ import java.util.ArrayList;
 
 public final class User {
 
-    private String name;
+    private long id;
+    private final String name;
+
     private LocalDate birthday;
 
-    private ArrayList<User> friends = new ArrayList<>();
+    private final ArrayList<User> friends = new ArrayList<>();
 
     public User(String name, LocalDate birthday) {
         this.name = name;
         this.birthday = birthday;
+    }
+
+    public User(Long id, String name) {
+        this.name = name;
+        this.id = id;
     }
 
     public String getName() {
@@ -33,5 +40,9 @@ public final class User {
 
     public void setFriends(User user) {
         this.friends.add(user);
+    }
+
+    public long getId() {
+        return id;
     }
 }
