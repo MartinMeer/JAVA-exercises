@@ -1,5 +1,5 @@
 run-dist:
-	./build/install/app/bin/app
+	./build/install/java-exercises/bin/java-exercises
 mkInstallDist:
 	./gradlew clean
 	./gradlew installDist

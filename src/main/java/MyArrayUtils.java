@@ -1,19 +1,27 @@
-import java.util.Arrays;
-
 public class MyArrayUtils {
 
-    /*метода get(strings, index, defaultValue),
-    который получает элемент массива по индексу, при условии, что он существует. \
+    /**метод get(strings, index, defaultValue) получает элемент массива по индексу, при условии, что он существует. \
     В ином случае возвращается defaultValue.*/
-
-    public static String get(String[] strings, int index, String defaultValue) {
-        int stringsLength = strings.length;
+    public static <T> T get(T[] arr, int index, T defaultValue) {
+        int stringsLength = arr.length;
         for (int i = 0; i < stringsLength; i++) {
             if (i == index) {
-                return strings[i];
+                return arr[i];
             }
         }
         return defaultValue;
     }
 
+    /**take(numbers, n), который возвращает массив из первых n значений массива.*/
+    public static int[] take(int [] numbers, int index) {
+        int resultLength = numbers.length - index;
+        if (resultLength <= 0) {
+            return new int[] {};
+        }
+        var result = new int[resultLength];
+        for (int i = 0; i < resultLength; i++) {
+            result[i] = numbers[i];
+        }
+        return result;
+    }
 }
