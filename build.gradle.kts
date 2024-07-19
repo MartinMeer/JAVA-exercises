@@ -5,6 +5,7 @@ plugins {
     id("com.github.ben-manes.versions") version "0.51.0"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
     id("io.freefair.lombok") version "8.6"
+    jacoco
 }
 
 group = ""
@@ -34,22 +35,36 @@ dependencies {
 
 }
 
-
+//tasks
 tasks.withType<JavaCompile> {
     val compilerArgs = options.compilerArgs
     compilerArgs.add("-Aproject=${project.group}/${project.name}")
 }
-
-
-
 tasks.test {
     useJUnitPlatform()
+}
+tasks.test {
+    finalizedBy(tasks.jacocoTestReport) // report is always generated after tests run
+}
+tasks.jacocoTestReport {
+    dependsOn(tasks.test) // tests are required to run before generating the report
+}
+tasks.jacocoTestReport {
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir("jacocoHtml")
+    }
+}
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
 }
 
 application {
     mainClass.set("App")
 }
-
-tasks.getByName("run", JavaExec::class) {
-    standardInput = System.`in`
+jacoco {
+    toolVersion = "0.8.11"
+    reportsDirectory = layout.buildDirectory.dir("customJacocoReportDir")
 }
+
