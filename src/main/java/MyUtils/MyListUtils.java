@@ -1,9 +1,10 @@
+package MyUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-/*
-Метод add() добавляет в список, переданный первым аргументом, элемент по указанному индексу.
+/**Метод add() добавляет в список, переданный первым аргументом, элемент по указанному индексу.
 
     - Если в списке уже есть элемент по такому индексу, то он и все следующие элементы сдвигаются вправо.
     - Если индекс не передан, элемент добавляется в конец списка.
@@ -14,30 +15,10 @@ import java.util.function.Predicate;
 Первый – список List, в который нужно добавить элемент
 Второй – добавляемый элемент
 Третий (необязательный) - индекс, по которому будет вставлен элемент. Если индекс не передан, элемент будет добавлен в конец списка.
-В случае, если индекс элемента выходит за пределы длины массива (index < 0 || index > size()), будет выброшено исключение IndexOutOfBoundsException
+В случае, если индекс элемента выходит за пределы длины массива (index < 0 || index > size()), будет выброшено исключение IndexOutOfBoundsException. */
 
-List<Integer> coll = Arrays.asList(1, 2, 3, 4);
-
-// Все вызовы нужно рассматривать, как независимые
-add(coll, 5); // true
-System.out.println(coll); // => [1, 2 ,3, 4, 5]
-
-add(coll, 5, 1); // true
-System.out.println(coll); // => [1, 5, 2 ,3, 4]
-
-add(coll, 5, 4); // true
-System.out.println(coll); // => [1, 2 ,3, 4, 5]
-Подсказки
-В этом упражнении нужно будет проверить не только возвращаемое значение, но и то, что метод нужным образом меняет исходный список
-Информация по исключению дается для более полного понимания работы метода, проверять это поведение в упражнении не нужно.
- */
 public class MyListUtils<T> {
-   private  List<T> list1;
-    private  List<T> list2;
-
-    /**/
-
-    public boolean add (List<T> list, T element, int index) throws IndexOutOfBoundsException{
+    public static <T> boolean add (List<T> list, T element, int index) throws IndexOutOfBoundsException{
         int listSize = list.size();
         if (index < 0 || index > listSize) {
             throw new IndexOutOfBoundsException();
@@ -73,7 +54,7 @@ public class MyListUtils<T> {
         return filteredList;
     }
 
-    public static <T extends Human> int findFirstIndex(List<T> elements, String index) {
+    /*public static <T extends Human> int findFirstIndex(List<T> elements, String index) {
         int indexLength = index.length();
         for (T element : elements) {
             String elementName = element.getName();
@@ -82,5 +63,33 @@ public class MyListUtils<T> {
             }
         }
         return -1;
+    }*/
+    public static <T> int indexOf(List<T> coll, T value, int fromIndex) {
+        var collLength = coll.size();
+        if (collLength == 0) {
+            return -1;
+        }
+
+        var normalisedIndex = fromIndex;
+        if (normalisedIndex < 0) {
+            if (-normalisedIndex > collLength) {
+                normalisedIndex = 0;
+            } else {
+                normalisedIndex += collLength;
+            }
+        }
+
+        var index = -1;
+        for (int i = normalisedIndex; i < collLength; i++) {
+            var current = coll.get(i);
+            if (current.equals(value)) {
+                return i;
+            }
+        }
+        return index;
+    }
+
+    public static <T> int indexOf(List<T> coll, T value) {
+        return coll.indexOf(value);
     }
 }
