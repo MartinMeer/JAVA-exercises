@@ -4,20 +4,88 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-/**Метод add() добавляет в список, переданный первым аргументом, элемент по указанному индексу.
 
-    - Если в списке уже есть элемент по такому индексу, то он и все следующие элементы сдвигаются вправо.
-    - Если индекс не передан, элемент добавляется в конец списка.
-    - В случае успешного изменения коллекции метод возвращает true.
-    - Метод меняет переданный список
 
-Метод принимает три параметра:
-Первый – список List, в который нужно добавить элемент
-Второй – добавляемый элемент
-Третий (необязательный) - индекс, по которому будет вставлен элемент. Если индекс не передан, элемент будет добавлен в конец списка.
-В случае, если индекс элемента выходит за пределы длины массива (index < 0 || index > size()), будет выброшено исключение IndexOutOfBoundsException. */
+public class MyListUtils<T>{
 
-public class MyListUtils<T> {
+    /**Метод заполняет элементы списка переданным значением, начиная со старта и заканчивая (но не включая) конечной позицией.
+     Метод меняет исходный список!
+     Метод принимает следующие параметры:
+     coll – список List, элементы которого будут заполнены
+     element – значение, которым будут заполнены элементы списка
+     begin – стартовая позиция. Не обязательный параметр. Если стартовая позиция не передана, заполнение будет происходить с начала списка.
+     end – конечная позиция. Не обязательный параметр. Если конечная позиция не передана, заполнение будет происходить до конца списка.
+     Метод работает только с неотрицательными индексами*/
+    /*public static <T> void fill(List coll, T element, int begin, int end) throws IllegalArgumentException{
+        var collLength = coll.size();
+
+        var normalizedBegin = begin > collLength ? end : begin;
+        var normalizedEnd = end;
+
+        if (end > collLength) {
+            normalizedEnd = collLength;
+        } else if (end < 0) {
+            normalizedEnd = end + collLength;
+        }
+
+        if (begin < 0) {
+            throw new IllegalArgumentException("Begin index should NOT be negative!");
+        }
+        *//*if (normalizedBegin > normalizedEnd) {
+            throw new IllegalArgumentException("Begin index should NOT be more than end index!");
+        }*//*
+
+        for (int i = normalizedBegin; i < normalizedEnd; i++) {
+            coll.remove(i);
+            coll.add(i, element);
+        }
+    }
+    public static <T> void fill(List coll, T element) {
+        fill(coll, element, 0, coll.size());
+    }
+
+    public static <T> void fill(List coll, T element, int begin) {
+        fill(coll, element, begin, coll.size());
+    }*/
+
+    public static <T> void fill(List<T> coll, T element, int begin, int end) {
+        if (begin >= end) {
+            return;
+        }
+
+        var collLength = coll.size();
+        var normalizedBegin = begin > collLength ? end : begin;
+        var normalizedEnd = end > collLength ? collLength : end;
+
+        for (var i = normalizedBegin; i < normalizedEnd; i++) {
+            coll.set(i, element);
+        }
+    }
+
+    public static <T> void fill(List<T> coll, T element, int begin) {
+        fill(coll, element, begin, coll.size());
+    }
+
+    public static <T> void fill(List<T> coll, T element) {
+        fill(coll, element, 0, coll.size());
+    }
+
+
+
+
+
+    /**Метод add() добавляет в список, переданный первым аргументом, элемент по указанному индексу.
+
+     - Если в списке уже есть элемент по такому индексу, то он и все следующие элементы сдвигаются вправо.
+     - Если индекс не передан, элемент добавляется в конец списка.
+     - В случае успешного изменения коллекции метод возвращает true.
+     - Метод меняет переданный список
+
+     Метод принимает три параметра:
+     Первый – список List, в который нужно добавить элемент
+     Второй – добавляемый элемент
+     Третий (необязательный) - индекс, по которому будет вставлен элемент. Если индекс не передан, элемент будет добавлен в конец списка.
+     В случае, если индекс элемента выходит за пределы длины массива (index < 0 || index > size()), будет выброшено исключение IndexOutOfBoundsException. */
     public static <T> boolean add (List<T> list, T element, int index) throws IndexOutOfBoundsException{
         int listSize = list.size();
         if (index < 0 || index > listSize) {

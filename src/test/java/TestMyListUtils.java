@@ -25,6 +25,26 @@ public class TestMyListUtils {
         list = new ArrayList<>(coll);
     }
 
+    /**var coll = Arrays.asList("a", "b", "c", "d");
+
+     // Все вызовы нужно рассматривать, как независимые
+     fill(coll, "*", 1, 3);
+     System.out.println(coll); // => ["a", "*", "*", "d"]
+
+     fill(coll, "*");
+     System.out.println(coll); // => ["*", "*", "*", "*"]
+
+     fill(coll, "*", 4, 6);
+     System.out.println(coll); // => ["a", "b", "c", "d"]
+
+     fill(coll, "*", 0, 10);
+     System.out.println(coll); // => ["*", "*", "*", "*"]*/
+    @Test
+    public void testFill() {
+
+    }
+
+
     @Test
     public void testIndexOf() {
         List<Integer> coll;
@@ -90,7 +110,7 @@ public class TestMyListUtils {
 
     @Test
     public void TestAddFalse () {
-        assertThrows(IndexOutOfBoundsException.class, () -> myListUtils.add(list, 5, 10));
+        assertThrows(IndexOutOfBoundsException.class, () -> MyListUtils.add(list, 5, 10));
     }
 
 
