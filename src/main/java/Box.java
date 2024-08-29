@@ -8,6 +8,8 @@
 Единственная загвоздка - класс должен уметь хранить значение любого типа.
 Подумайте, как вы будете решать задачу на данном этапе. А в следующих уроках мы узнаем, как это делается при помощи дженериков*/
 
+import OOP.Pizza;
+
 public class Box {
     private Object o;
 
@@ -17,5 +19,9 @@ public class Box {
 
     public Object getValue() {
         return o;
+    }
+
+    public static Pizza getPizza() {
+        return null;
     }
 }
