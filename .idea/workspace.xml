@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat: Builder pattern v2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/OOP/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestPizza/TestPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyListUtilsAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestMyListUtilsAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestPizza.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestPizza/TestPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPizza/TestPizza.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +29,9 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/src/main/java/OOP">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -45,6 +43,18 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="java-exercises" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-exercises" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-exercises" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="lombok" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -104,6 +114,7 @@
     "Gradle.java-exercises [run].executor": "Run",
     "Gradle.java-exercises [test].executor": "Run",
     "Gradle.java-exercises1 [clean].executor": "Run",
+    "Gradle.java-exercises1 [delombok].executor": "Run",
     "JUnit.TestPizza.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -114,6 +125,7 @@
     "git-widget-placeholder": "Module3-OOP",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
+    "last_opened_file_path": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.47356322",
@@ -141,30 +153,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;TestPizza.TestPizza&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="WithoutTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;WithoutTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -264,6 +252,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="java-exercises1 [delombok]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/src/main/java/OOP" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="delombok" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TestPizza" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-exercises.test" />
       <extension name="coverage">
@@ -279,13 +289,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.java-exercises [run]" />
+      <item itemvalue="Gradle.java-exercises [test]" />
+      <item itemvalue="Gradle.java-exercises1 [clean]" />
+      <item itemvalue="Gradle.java-exercises1 [delombok]" />
+      <item itemvalue="Gradle.TestPizza" />
+      <item itemvalue="JUnit.TestPizza" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.java-exercises [test]" />
+        <item itemvalue="Gradle.java-exercises1 [delombok]" />
+        <item itemvalue="Gradle.java-exercises1 [clean]" />
         <item itemvalue="JUnit.TestPizza" />
         <item itemvalue="Gradle.TestPizza" />
-        <item itemvalue="Gradle.java-exercises1 [clean]" />
-        <item itemvalue="Gradle.WithoutTest" />
       </list>
     </recent_temporary>
   </component>
@@ -466,7 +484,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724842957056</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat: Builder pattern v2">
+      <option name="closed" value="true" />
+      <created>1724889628440</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724889628475</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

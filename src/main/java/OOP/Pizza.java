@@ -14,6 +14,8 @@ vegetableTopping — овощная начинка, строка
 cheeseTopping — сорт сыра, строка
 Сделаем класс иммутабельным. Реализуйте в классе билдер и геттеры для всех полей*/
 @Getter
+//@Builder
+//@Data
 public final class Pizza {
     private String size;
     private String dough;
@@ -22,16 +24,16 @@ public final class Pizza {
     private String vegetableTopping;
     private String cheeseTopping;
 
-    private Pizza () {
+    Pizza() {
     }
-    public static PizzaBuilder pizzaBuilder() {
+    public static PizzaBuilder builder() {
         return new PizzaBuilder();
     }
 
     public static class PizzaBuilder {
         private Pizza pizza;
 
-        public PizzaBuilder() {
+        private PizzaBuilder() {
             pizza = new Pizza();
         }
         public PizzaBuilder size (String size) {
@@ -59,10 +61,7 @@ public final class Pizza {
             return this;
         }
         public Pizza build() {
-            return new Pizza();
+            return pizza;
         }
     }
-
-
-
 }

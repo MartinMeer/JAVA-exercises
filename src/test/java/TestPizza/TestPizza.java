@@ -1,10 +1,10 @@
 package TestPizza;
 
+import OOP.App;
 import OOP.Pizza;
 import org.junit.jupiter.api.Test;
 
-import static OOP.App.getPizza;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 /*var pizza = OOP.App.getPizza();
 
@@ -16,25 +16,68 @@ pizza.getCheeseTopping(); // mozzarella*/
 
 public class TestPizza {
 
-    //Pizza pizza;
-
-
     @Test
-    public void testPizzaVeg() {
-        String size = "big";
-        String dough = "thin";
-        String sauce = "tomato";
-        String meatTopping;
-        String vegetableTopping = "basil";
-        String cheeseTopping = "mozzarella";
-        Pizza pizza = getPizza();
-        assertEquals ("big", pizza.getSize());
-        assert (pizza.getDough().equals("thin"));
-        assert (pizza.getSauce().equals("tomato"));
-        assert (pizza.getVegetableTopping().equals("basil"));
-        assert (pizza.getCheeseTopping().equals("mozzarella"));
+    public void testPizzaWithAllParams() {
+        var pizza = Pizza.builder()
+                .size("big")
+                .dough("thin")
+                .sauce("tomato")
+                .vegetableTopping("pepper")
+                .meatTopping("ham")
+                .cheeseTopping("cheddar")
+                .build();
 
+        assertThat(pizza.getSize()).isEqualTo("big");
+        assertThat(pizza.getDough()).isEqualTo("thin");
+        assertThat(pizza.getSauce()).isEqualTo("tomato");
+        assertThat(pizza.getVegetableTopping()).isEqualTo("pepper");
+        assertThat(pizza.getMeatTopping()).isEqualTo("ham");
+        assertThat(pizza.getCheeseTopping()).isEqualTo("cheddar");
     }
 
+    @Test
+    public void testPizzaWithoutAllParams1() {
+        var pizza = Pizza.builder()
+                .size("small")
+                .dough("thin")
+                .sauce("tomato")
+                .cheeseTopping("cheddar")
+                .build();
 
+        assertThat(pizza.getSize()).isEqualTo("small");
+        assertThat(pizza.getDough()).isEqualTo("thin");
+        assertThat(pizza.getSauce()).isEqualTo("tomato");
+        assertThat(pizza.getCheeseTopping()).isEqualTo("cheddar");
+    }
+
+    @Test
+    public void testPizzaWithoutAllParams2() {
+        var pizza = Pizza.builder()
+                .size("small")
+                .dough("thin")
+                .sauce("tomato")
+                .meatTopping("salami")
+                .cheeseTopping("mozzarella")
+                .build();
+
+        assertThat(pizza.getSize()).isEqualTo("small");
+        assertThat(pizza.getDough()).isEqualTo("thin");
+        assertThat(pizza.getSauce()).isEqualTo("tomato");
+        assertThat(pizza.getMeatTopping()).isEqualTo("salami");
+        assertThat(pizza.getCheeseTopping()).isEqualTo("mozzarella");
+    }
+
+    @Test
+    public void testGetApp() {
+        var pizza = App.getPizza();
+
+        assertThat(pizza.getSize()).isEqualTo("big");
+        assertThat(pizza.getDough()).isEqualTo("thin");
+        assertThat(pizza.getSauce()).isEqualTo("tomato");
+        assertThat(pizza.getVegetableTopping()).isEqualTo("basil");
+        assertThat(pizza.getCheeseTopping()).isEqualTo("mozzarella");
+    }
 }
+
+
+
