@@ -1,7 +1,5 @@
 package OOP;
 
-import lombok.Getter;
-
 /*сборка собственного варианта пиццы при заказе на сайте пиццерии.
 Вы можете выбрать различные варианты теста, соуса, начинки.
 При этом не все параметры являются обязательными.
@@ -13,55 +11,57 @@ meatTopping — мясная начинка, строка
 vegetableTopping — овощная начинка, строка
 cheeseTopping — сорт сыра, строка
 Сделаем класс иммутабельным. Реализуйте в классе билдер и геттеры для всех полей*/
+
+import lombok.Getter;
+
 @Getter
-//@Builder
-//@Data
-public final class Pizza {
-    private String size;
-    private String dough;
-    private String sauce;
-    private String meatTopping;
-    private String vegetableTopping;
-    private String cheeseTopping;
+public class Pizza {
 
-    Pizza() {
-    }
-    public static PizzaBuilder builder() {
-        return new PizzaBuilder();
+    private final String size;
+    private final String dough;
+    private final String sauce;
+
+    Pizza(Builder builder) {
+        this.size = builder.size;
+        this.dough = builder.dough;
+        this.sauce = builder.sauce;
     }
 
-    public static class PizzaBuilder {
-        private Pizza pizza;
+    @Override
+    public String toString() {
+        return "Your pizza is "
+        + this.size
+        + ", on "
+        + this.dough
+        + " dough, has a "
+        + this.sauce
+        + " sauce.";
+    }
 
-        private PizzaBuilder() {
-            pizza = new Pizza();
-        }
-        public PizzaBuilder size (String size) {
-            pizza.size = size;
+    public static class Builder {
+        private String size;
+        private String dough;
+        private String sauce;
+
+        public Builder size(String size) {
+            this.size = size;
             return this;
         }
-        public PizzaBuilder dough (String dough) {
-            pizza.dough = dough;
+
+        public Builder dough(String dough) {
+            this.dough = dough;
             return this;
         }
-        public PizzaBuilder sauce (String sauce) {
-            pizza.sauce = sauce;
+
+        public Builder sauce(String sauce) {
+            this.sauce = sauce;
             return this;
         }
-        public PizzaBuilder meatTopping (String meatTopping) {
-            pizza.meatTopping = meatTopping;
-            return this;
-        }
-        public PizzaBuilder vegetableTopping (String vegetableTopping) {
-            pizza.vegetableTopping = vegetableTopping;
-            return this;
-        }
-        public PizzaBuilder cheeseTopping (String cheeseTopping) {
-            pizza.cheeseTopping = cheeseTopping;
-            return this;
-        }
+
         public Pizza build() {
-            return pizza;
+            return new Pizza(this);
         }
     }
 }
+
+
