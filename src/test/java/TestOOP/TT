@@ -1,0 +1,34 @@
+ANY Course MUST have at lest one Lesson
+ANY Lesson MuST have the Course
+
+  +-------------------+
+  |      Course       |
+  +-------------------+
+  | - name: String    |
+  | - lessons: List   |
+  +-------------------+
+  | + addLesson()     |
+  | + getName()       |
+  | + setName()       |
+  | + getLessons()    |
+  +-------------------+
+          | 1
+          |
+          |
+          v 0..*
+  +-------------------+
+  |      Lesson       |
+  +-------------------+
+  | - name: String    |
+  | - course: Course  |
+  +-------------------+
+  | + getName()       |
+  | + setName()       |
+  | + getCourse()     |
+  | + setCourse()     |
+  +-------------------+
+
+Solutions:
+
+1. Builders
+2.

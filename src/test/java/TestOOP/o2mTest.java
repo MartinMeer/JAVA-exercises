@@ -5,6 +5,8 @@ import OOP.Lesson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
@@ -16,7 +18,14 @@ public class o2mTest {
     static Lesson lesson3;
     @BeforeAll
     public static void setUp() {
-        course1 = new Course("OOP");
+        course1 = Course.builder()
+                .coursesList(Arrays.asList(Lesson.builder()
+                                .course(course1)
+                                .lessonName("L0")
+                                .build()))
+                .courseName("OOP")
+                .build();
+
         lesson1 = Lesson.builder()
                 .lessonName("L1")
                 .course(course1)
@@ -29,6 +38,13 @@ public class o2mTest {
                 .lessonName("L3")
                 .course(course1)
                 .build();
+    }
+
+    @Test
+    public void testCourse() {
+        int actual = course1.getCoursesList().size();
+        int expected = 4;
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -54,8 +70,9 @@ public class o2mTest {
     public void testDeleteCourseFromLesson() {
         lesson1.setCourse(null);
         assertNull(lesson1.getCourse());
-
     }
+
+
 
 
 
