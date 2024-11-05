@@ -1,18 +1,21 @@
 package OOP.Department;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
-@Builder
 public class Employee {
     private String fullName;
     private String position;
     private Department department;
 
-    @Override
+    public Employee(String fullName, String position) {
+        this.fullName = fullName;
+        this.position = position;
+    }
+
+    /*@Override
     public String toString() {
         return "Full name: "
                 + fullName
@@ -21,5 +24,5 @@ public class Employee {
                 + ".\nDepartment: "
                 + department.getTitle()
                 + "\n\n";
-    }
+    }*/
 }

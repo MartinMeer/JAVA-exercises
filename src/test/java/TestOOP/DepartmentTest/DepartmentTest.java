@@ -48,21 +48,9 @@ public class DepartmentTest {
     @BeforeAll
     public static void setUp() {
         department1 = new Department("IT");
-        employee1 = Employee.builder()
-                .fullName("J.Depp")
-                .position("junior dev")
-                .department(department1)
-                .build();
-        employee2 = Employee.builder()
-                .fullName("J.Silver")
-                .position("middle dev")
-                .department(department1)
-                .build();
-        employee3 = Employee.builder()
-                .fullName("A.Hopkins")
-                .position("senior dev")
-                .department(department1)
-                .build();
+        employee1 = new Employee("J.Depp", "junior dev");
+        employee2 = new Employee("J.Silver", "middle dev");
+        employee3 = new Employee("A.Hopkins", "senior dev");
         department1.addEmployee(employee1, employee2);
         department1.addEmployee(employee3);
 

@@ -15,11 +15,14 @@ public class Department {
 
     public Department(String title) {
         this.title = title;
-        employees = new ArrayList<Employee>();
+        employees = new ArrayList();
     }
 
     public void addEmployee(Employee... employee) {
-        Arrays.stream(employee).forEach(e -> employees.add(e));
+        Arrays.stream(employee).forEach(e -> {
+            employees.add(e);
+            e.setDepartment(this);
+        });
     }
 
     public void removeEmployee(Employee employeeForRemove) {
@@ -27,18 +30,15 @@ public class Department {
         Employee removedEmployee = employees.get(indexOfRemovedEmployee);
         removedEmployee.setDepartment(null);
         employees.remove(indexOfRemovedEmployee);
-
     }
 
-    @Override
+   /* @Override
     public String toString() {
         StringBuilder listOfEmployees = new StringBuilder();
         employees.stream().forEach(listOfEmployees::append);
-
         return "Department Name: "
                 + title
                 + ".\nList of employees:\n"
                 + listOfEmployees;
-    }
-
+    }*/
 }
