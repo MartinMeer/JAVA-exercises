@@ -1,28 +1,29 @@
-package OOP;
+package OOP.Course;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
-@Builder
 public class Course {
     private String courseName;
-    private List<Lesson> coursesList;
+    private List<Lesson> lessonsList;
+    private List<Student> studentsList;
 
-    /*public Course(String courseName) {
+    public Course(String courseName) {
         this.courseName = courseName;
-        coursesList = new ArrayList<>();
-    }*/
+        lessonsList = new ArrayList<>();
+        studentsList = new ArrayList<>();
+    }
 
     @Override
     public String toString() {
         return "Course Name: "
         + courseName
         + ". List of lessons: "
-        + coursesList.toString();
+        + lessonsList.toString();
     }
 }

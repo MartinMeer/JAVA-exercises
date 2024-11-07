@@ -1,7 +1,7 @@
 package TestOOP;
 
-import OOP.Course;
-import OOP.Lesson;
+import OOP.Course.Course;
+import OOP.Course.Lesson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -42,16 +42,16 @@ public class o2mTest {
 
     @Test
     public void testCourse() {
-        int actual = course1.getCoursesList().size();
+        int actual = course1.getLessonsList().size();
         int expected = 4;
         assertEquals(expected, actual);
     }
 
     @Test
     public void testAdd() {
-        course1.getCoursesList().add(lesson1);
-        course1.getCoursesList().add(lesson2);
-        course1.getCoursesList().add(lesson3);
+        course1.getLessonsList().add(lesson1);
+        course1.getLessonsList().add(lesson2);
+        course1.getLessonsList().add(lesson3);
         String actual = course1.toString();
         String expected = "Course Name: OOP. List of lessons: [L1:OOP, L2:OOP, L3:OOP]";
 
@@ -60,7 +60,7 @@ public class o2mTest {
 
     @Test
     public void testDeleteLessonFromCourse() {
-        course1.getCoursesList().remove(lesson1);
+        course1.getLessonsList().remove(lesson1);
         String actual = course1.toString();
         String expected = "Course Name: OOP. List of lessons: [L2:OOP, L3:OOP]";
         assertEquals(expected, actual);

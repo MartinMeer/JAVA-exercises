@@ -1,4 +1,4 @@
-package OOP;
+package OOP.Course;
 
 import lombok.Builder;
 import lombok.Getter;
