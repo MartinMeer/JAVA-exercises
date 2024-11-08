@@ -4,16 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat: Builder pattern v2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat(OOP): Course v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Course/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CollectionsUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Film.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Human.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Man.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyArrayUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyStringUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyUtils/MyListUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/CourseMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Course/CourseMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Course/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/m2mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SimpleTriple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Summarize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Triple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Without.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Woman.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cart/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cart/CartMaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cart/Good.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MethodsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyArrayUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyListUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyListUtilsAdd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyListUtilsFill.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/o2mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestOOP/o2mTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestPizza/TestPizza.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSumm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WithoutTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cart/CartMakerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +117,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Module3-OOP" />
+        <entry key="$PROJECT_DIR$" value="729867f5a3780b27d89f274df166950ae574a71b" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,42 +143,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build java-exercises.executor": "Run",
-    "Gradle.Build java-exercises1.executor": "Run",
-    "Gradle.Load Gradle Dependencies.executor": "Run",
-    "Gradle.TestPizza.executor": "Run",
-    "Gradle.WithoutTest.executor": "Run",
-    "Gradle.WithoutTest.right.executor": "Run",
-    "Gradle.java-exercises [:App.main()].executor": "Run",
-    "Gradle.java-exercises [:Main.main()].executor": "Run",
-    "Gradle.java-exercises [:TestMyArrayUtils.main()].executor": "Run",
-    "Gradle.java-exercises [installDist].executor": "Run",
-    "Gradle.java-exercises [run].executor": "Run",
-    "Gradle.java-exercises [test].executor": "Run",
-    "Gradle.java-exercises1 [clean].executor": "Run",
-    "Gradle.java-exercises1 [delombok].executor": "Run",
-    "JUnit.TestPizza.executor": "Run",
-    "JUnit.m2mTest (1).executor": "Run",
-    "JUnit.m2mTest.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.java-exercises.executor": "Run",
-    "git-widget-placeholder": "729867f5",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
-    "last_opened_file_path": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.47356322",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build java-exercises.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build java-exercises1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TestPizza.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WithoutTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WithoutTest.right.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-exercises [:App.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-exercises [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-exercises [:TestMyArrayUtils.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-exercises [installDist].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-exercises [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-exercises [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-exercises1 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.java-exercises1 [delombok].executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestPizza.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.m2mTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.m2mTest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.java-exercises.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Module3-OOP&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47356322&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="OOP" />
@@ -256,7 +282,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="m2mTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="m2mTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-exercises.test" />
       <extension name="coverage">
         <pattern>
@@ -266,6 +292,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="CourseTest" />
       <option name="MAIN_CLASS_NAME" value="CourseTest.m2mTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -490,7 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724889628475</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat(OOP): Course v2">
+      <option name="closed" value="true" />
+      <created>1731072391727</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1731072391727</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,7 +539,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Module3-OOP" />
+                        <option value="Module3-OOP" />
                       </list>
                     </value>
                   </entry>
@@ -538,14 +573,15 @@
     <MESSAGE value="feat: JUnit Without" />
     <MESSAGE value="feat: Builder pattern" />
     <MESSAGE value="feat: Builder pattern v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Builder pattern v2" />
+    <MESSAGE value="feat(OOP): Course v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(OOP): Course v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java</url>
-          <line>38</line>
+          <line>42</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

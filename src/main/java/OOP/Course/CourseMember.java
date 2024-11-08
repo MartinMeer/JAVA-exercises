@@ -12,13 +12,14 @@ import java.util.List;
 public class CourseMember {
 
     private Student student;
-    private List<Course> course = new ArrayList<>(5);
+    private List<Course> courseList;
     private LocalDate dateOfStart;
     private LocalDate dateOfEnd;
 
     public CourseMember(Student student, Course course, String dateOfStart) {
         this.student = student;
-        this.course.add(course);
+        courseList = new ArrayList<>();
+        addCourse(course);
         this.dateOfStart = LocalDate.parse(dateOfStart);
     }
     @Override
@@ -26,12 +27,16 @@ public class CourseMember {
         return "Student:\n"
                 + student.toString()
                 + "List of courses:\n"
-                + course.stream().toString();
+                + courseList.stream().toString();
     }
 
     public String viewCourse() {
-        String courseStart = "Course start " + course.stream().toString() + "on: " + dateOfStart.toString();
-        String courseEnd = courseStart + ".\nEnded course " + course.stream().toString() + "on " + dateOfEnd;
+        String courseStart = "Course start " + courseList.stream().toString() + "on: " + dateOfStart.toString();
+        String courseEnd = courseStart + ".\nEnded course " + courseList.stream().toString() + "on " + dateOfEnd;
         return  (dateOfEnd == null) ? courseStart : courseEnd;
+    }
+
+    public void addCourse(Course course) {
+        courseList.add(course);
     }
 }
