@@ -1,7 +1,5 @@
 package TestOOP;
 
-import OOP.Course.Course;
-import OOP.Course.Lesson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

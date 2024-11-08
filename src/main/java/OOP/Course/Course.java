@@ -11,19 +11,17 @@ import java.util.List;
 public class Course {
     private String courseName;
     private List<Lesson> lessonsList;
-    private List<Student> studentsList;
+    private List<CourseMember> membersList;
 
     public Course(String courseName) {
         this.courseName = courseName;
         lessonsList = new ArrayList<>();
-        studentsList = new ArrayList<>();
+        membersList = new ArrayList<>();
     }
 
     @Override
     public String toString() {
-        return "Course Name: "
-        + courseName
-        + ". List of lessons: "
-        + lessonsList.toString();
+        return "Course Name: " + courseName;
+
     }
 }

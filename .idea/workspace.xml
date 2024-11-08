@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat: Builder pattern v2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Course/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/CourseMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Course/CourseMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Course/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestPizza/TestPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPizza/TestPizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/m2mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/o2mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestOOP/o2mTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +91,23 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="testing" />
+        <entry key="$PROJECT_DIR$" value="Module3-OOP" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MartinMeer&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MartinMeer/java-exercises.git&quot;,
+    &quot;accountId&quot;: &quot;986a6cce-a0e3-48cd-9100-3cdfb4964e7c&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -103,12 +120,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build java-exercises.executor": "Run",
     "Gradle.Build java-exercises1.executor": "Run",
     "Gradle.Load Gradle Dependencies.executor": "Run",
     "Gradle.TestPizza.executor": "Run",
     "Gradle.WithoutTest.executor": "Run",
     "Gradle.WithoutTest.right.executor": "Run",
     "Gradle.java-exercises [:App.main()].executor": "Run",
+    "Gradle.java-exercises [:Main.main()].executor": "Run",
     "Gradle.java-exercises [:TestMyArrayUtils.main()].executor": "Run",
     "Gradle.java-exercises [installDist].executor": "Run",
     "Gradle.java-exercises [run].executor": "Run",
@@ -116,13 +135,15 @@
     "Gradle.java-exercises1 [clean].executor": "Run",
     "Gradle.java-exercises1 [delombok].executor": "Run",
     "JUnit.TestPizza.executor": "Run",
+    "JUnit.m2mTest (1).executor": "Run",
+    "JUnit.m2mTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Shell Script.java-exercises.executor": "Run",
-    "git-widget-placeholder": "Module3-OOP",
+    "git-widget-placeholder": "729867f5",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
     "last_opened_file_path": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
@@ -138,30 +159,13 @@
       <recent name="TestPizza" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.java-exercises [test]">
-    <configuration name="TestPizza" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestPizza.TestPizza&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="JUnit.m2mTest (1)">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="java-exercises.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="java-exercises [run]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
@@ -230,28 +234,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="java-exercises1 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="java-exercises1 [delombok]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -274,36 +256,52 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TestPizza" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="m2mTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-exercises.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="TestPizza.*" />
+          <option name="PATTERN" value="CourseTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="TestPizza" />
-      <option name="MAIN_CLASS_NAME" value="TestPizza.TestPizza" />
+      <option name="PACKAGE_NAME" value="CourseTest" />
+      <option name="MAIN_CLASS_NAME" value="CourseTest.m2mTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="m2mTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-exercises.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestOOP.CourseTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestOOP.CourseTest" />
+      <option name="MAIN_CLASS_NAME" value="TestOOP.CourseTest.m2mTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.java-exercises [run]" />
       <item itemvalue="Gradle.java-exercises [test]" />
-      <item itemvalue="Gradle.java-exercises1 [clean]" />
       <item itemvalue="Gradle.java-exercises1 [delombok]" />
-      <item itemvalue="Gradle.TestPizza" />
-      <item itemvalue="JUnit.TestPizza" />
+      <item itemvalue="JUnit.m2mTest (1)" />
+      <item itemvalue="JUnit.m2mTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.m2mTest (1)" />
+        <item itemvalue="JUnit.m2mTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.java-exercises [test]" />
         <item itemvalue="Gradle.java-exercises1 [delombok]" />
-        <item itemvalue="Gradle.java-exercises1 [clean]" />
-        <item itemvalue="JUnit.TestPizza" />
-        <item itemvalue="Gradle.TestPizza" />
       </list>
     </recent_temporary>
   </component>
@@ -506,7 +504,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="myUtils" />
+                        <option value="origin/Module3-OOP" />
                       </list>
                     </value>
                   </entry>
@@ -541,5 +539,16 @@
     <MESSAGE value="feat: Builder pattern" />
     <MESSAGE value="feat: Builder pattern v2" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: Builder pattern v2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
