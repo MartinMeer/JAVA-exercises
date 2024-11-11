@@ -1,8 +1,8 @@
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+!OOPsrc/srcSSS/main/**/build/
+!OOPsrc/srcSSS/test/**/build/
 
 ### IntelliJ IDEA ###
 #.idea/modules.xml
@@ -14,8 +14,8 @@ build/
 *.iml
 *.ipr
 out
-!**/src/main/**/out/
-!**/src/test/**/out/
+!OOPsrc/srcSSS/main/**/out/
+!OOPsrc/srcSSS/test/**/out/
 
 #JAVA from https://github.com/github/gitignore
 # Compiled class file

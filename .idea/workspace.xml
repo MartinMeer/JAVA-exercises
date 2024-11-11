@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="step5: m2m relation OK">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="OOP 2 interfaces att1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exerciseS/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/Cottage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exerciseS/Cottage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/Flat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exerciseS/Flat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exerciseS/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/ReversedSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exerciseS/ReversedSequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/exercise/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exerciseTest/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +134,7 @@
     "Gradle.java-exercises1 [delombok].executor": "Run",
     "JUnit.AppTest (1).executor": "Run",
     "JUnit.AppTest.executor": "Run",
+    "JUnit.AppTest.testGetMidPoint.executor": "Run",
     "JUnit.DepartmentTest.addEmployees.executor": "Debug",
     "JUnit.DepartmentTest.executor": "Run",
     "JUnit.DepartmentTest.printDepartment.executor": "Debug",
@@ -144,7 +151,7 @@
     "git-widget-placeholder": "HHW-OOP",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
-    "last_opened_file_path": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
+    "last_opened_file_path": "/home/oleg/IdeaProjects/java-exercises/java-exercises.iml",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.47356322",
@@ -152,7 +159,15 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/exercise" />
+      <recent name="$PROJECT_DIR$/src/test/java/exercise" />
+      <recent name="$PROJECT_DIR$/HHW/classes-and-objects/src/main/java/exercise" />
+      <recent name="$PROJECT_DIR$/HHW/classes-and-objects/src/test/java/exercise" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/exercise" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/test/java/HHW_classes_and_objects" />
       <recent name="$PROJECT_DIR$/src/main/java/OOP/HHW_classes_and_objects" />
       <recent name="$PROJECT_DIR$/HHW" />
@@ -162,7 +177,7 @@
       <recent name="TestPizza" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest (1)">
+  <component name="RunManager" selected="JUnit.AppTest">
     <configuration name="java-exercises [run]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -230,16 +245,16 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-exercises.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="HHW_classes_and_objects.*" />
+          <option name="PATTERN" value="exerciseS.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="HHW_classes_and_objects" />
-      <option name="MAIN_CLASS_NAME" value="HHW_classes_and_objects.AppTest" />
+      <option name="MAIN_CLASS_NAME" value="exercise.AppTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -260,16 +275,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.testGetMidPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-exercises.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exerciseS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HHW_classes_and_objects" />
+      <option name="MAIN_CLASS_NAME" value="exercise.AppTest" />
+      <option name="METHOD_NAME" value="testGetMidPoint" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="java-exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="java-exercises" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.java-exercises [run]" />
       <item itemvalue="Gradle.java-exercises [test]" />
-      <item itemvalue="JUnit.AppTest (1)" />
+      <item itemvalue="JUnit.AppTest.testGetMidPoint" />
       <item itemvalue="JUnit.AppTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest (1)" />
         <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.testGetMidPoint" />
         <item itemvalue="Gradle.java-exercises [test]" />
       </list>
     </recent_temporary>
@@ -491,7 +535,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731096882283</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="step5: m2m relation OK">
+      <option name="closed" value="true" />
+      <created>1731250720790</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1731250720790</updated>
+    </task>
+    <task id="LOCAL-00028" summary="OOP 1 classes&amp;objects">
+      <option name="closed" value="true" />
+      <created>1731339273356</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1731339273356</updated>
+    </task>
+    <task id="LOCAL-00029" summary="OOP 2 interfaces att1">
+      <option name="closed" value="true" />
+      <created>1731340613411</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1731340613411</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -505,7 +573,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="myUtils" />
+                        <option value="HHW-OOP" />
                       </list>
                     </value>
                   </entry>
@@ -518,8 +586,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: capitalizeWords" />
-    <MESSAGE value="feat: makeCensored" />
     <MESSAGE value="feat: getSomeCount v1" />
     <MESSAGE value="feat: getSomeCount v2" />
     <MESSAGE value="feat: 01 Box class contains Object" />
@@ -543,7 +609,9 @@
     <MESSAGE value="step4: my implementation of domain for Hexlet testing" />
     <MESSAGE value="step5: m2m relation v1" />
     <MESSAGE value="step5: m2m relation OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="step5: m2m relation OK" />
+    <MESSAGE value="OOP 1 classes&amp;objects" />
+    <MESSAGE value="OOP 2 interfaces att1" />
+    <option name="LAST_COMMIT_MESSAGE" value="OOP 2 interfaces att1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
