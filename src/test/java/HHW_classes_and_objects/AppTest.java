@@ -1,8 +1,8 @@
 package HHW_classes_and_objects;
 
-import org.junit.jupiter.api.Test;
-
 import OOP.HHW_classes_and_objects.Point;
+import OOP.HHW_classes_and_objects.Segment;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

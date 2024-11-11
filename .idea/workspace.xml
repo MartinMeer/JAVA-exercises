@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="step5: m2m relation v1" />
+    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="step5: m2m relation OK">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,11 +84,23 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="testing" />
+        <entry key="$PROJECT_DIR$" value="Module3-OOP" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MartinMeer&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MartinMeer/java-exercises.git&quot;,
+    &quot;accountId&quot;: &quot;cb6e60d6-a751-4d58-9531-ee24669e64c0&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -111,6 +126,8 @@
     "Gradle.java-exercises [test].executor": "Run",
     "Gradle.java-exercises1 [clean].executor": "Run",
     "Gradle.java-exercises1 [delombok].executor": "Run",
+    "JUnit.AppTest (1).executor": "Run",
+    "JUnit.AppTest.executor": "Run",
     "JUnit.DepartmentTest.addEmployees.executor": "Debug",
     "JUnit.DepartmentTest.executor": "Run",
     "JUnit.DepartmentTest.printDepartment.executor": "Debug",
@@ -124,7 +141,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Shell Script.java-exercises.executor": "Run",
-    "git-widget-placeholder": "Module3-OOP",
+    "git-widget-placeholder": "HHW-OOP",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
     "last_opened_file_path": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
@@ -135,12 +152,17 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/HHW_classes_and_objects" />
+      <recent name="$PROJECT_DIR$/src/main/java/OOP/HHW_classes_and_objects" />
+      <recent name="$PROJECT_DIR$/HHW" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="OOP" />
       <recent name="TestPizza" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DepartmentTest">
+  <component name="RunManager" selected="JUnit.AppTest (1)">
     <configuration name="java-exercises [run]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -208,68 +230,31 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="java-exercises1 [delombok]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/src/main/java/OOP" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="delombok" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="DepartmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-exercises.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="TestOOP.DepartmentTest.*" />
+          <option name="PATTERN" value="HHW_classes_and_objects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="TestOOP.DepartmentTest" />
-      <option name="MAIN_CLASS_NAME" value="TestOOP.DepartmentTest.DepartmentTest" />
+      <option name="PACKAGE_NAME" value="HHW_classes_and_objects" />
+      <option name="MAIN_CLASS_NAME" value="HHW_classes_and_objects.AppTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentTestHexlet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-exercises.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="TestOOP.DepartmentTest.*" />
+          <option name="PATTERN" value="testCars.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="TestOOP.DepartmentTest" />
-      <option name="MAIN_CLASS_NAME" value="TestOOP.DepartmentTest.DepartmentTestHexlet" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="o2mTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-exercises.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TestOOP.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TestOOP" />
-      <option name="MAIN_CLASS_NAME" value="TestOOP.o2mTest" />
+      <option name="PACKAGE_NAME" value="testCars" />
+      <option name="MAIN_CLASS_NAME" value="testCars.AppTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -278,18 +263,14 @@
     <list>
       <item itemvalue="Gradle.java-exercises [run]" />
       <item itemvalue="Gradle.java-exercises [test]" />
-      <item itemvalue="Gradle.java-exercises1 [delombok]" />
-      <item itemvalue="JUnit.DepartmentTest" />
-      <item itemvalue="JUnit.DepartmentTestHexlet" />
-      <item itemvalue="JUnit.o2mTest" />
+      <item itemvalue="JUnit.AppTest (1)" />
+      <item itemvalue="JUnit.AppTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DepartmentTest" />
-        <item itemvalue="JUnit.DepartmentTestHexlet" />
-        <item itemvalue="JUnit.o2mTest" />
+        <item itemvalue="JUnit.AppTest (1)" />
+        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="Gradle.java-exercises [test]" />
-        <item itemvalue="Gradle.java-exercises1 [delombok]" />
       </list>
     </recent_temporary>
   </component>
@@ -502,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730990891994</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="step5: m2m relation OK">
+      <option name="closed" value="true" />
+      <created>1731096882283</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1731096882283</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -553,14 +542,15 @@
     <MESSAGE value="step4: my own implementation of domain" />
     <MESSAGE value="step4: my implementation of domain for Hexlet testing" />
     <MESSAGE value="step5: m2m relation v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="step5: m2m relation v1" />
+    <MESSAGE value="step5: m2m relation OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="step5: m2m relation OK" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/TestOOP/o2mTest.java</url>
-          <line>50</line>
+          <line>51</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
