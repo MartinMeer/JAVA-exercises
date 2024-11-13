@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -5,13 +6,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        String[] splitted = split(input);
-        String output = numLine(splitted);
+        int[] splitted = split(input);
+
+
         System.out.println(output);
     }
 
-    public static String[] split(String input) {
-        return input.split(",");
+    public static int[] split(String input) {
+        String[] splitted = input.split(" ");
+        int[] numLine = Arrays.stream(splitted).mapToInt(Integer::parseInt).toArray();
+        return numLine;
     }
 
     public static String numLine(String[] splitted) {
