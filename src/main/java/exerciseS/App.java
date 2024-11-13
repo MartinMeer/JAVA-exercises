@@ -1,5 +1,0 @@
-package exerciseS;
-
-// BEGIN
-
-// END
