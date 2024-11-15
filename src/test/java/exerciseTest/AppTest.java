@@ -1,9 +1,14 @@
 package exerciseTest;
 
+import exercise.*;
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 class AppTest {
@@ -57,6 +62,23 @@ class AppTest {
     }
 
     // BEGIN
-    
+    @Test
+    void testReversedSequence() {
+        String test = "qwerty";
+        ReversedSequence rs = new ReversedSequence(test);
+        String expected = "ytrewq";
+        assertEquals(expected, rs.toString());
+    }
+
+    @Test
+    void testReversedSequenceExceptions() {
+        String test = "qwe";
+        var reversed = new ReversedSequence(test);
+        Exception ex = assertThrows(IndexOutOfBoundsException.class, () -> {reversed.charAt(10);});
+        String expected = "Index is out of bounds.";
+        String actual = ex.getMessage();
+        assertEquals(expected, actual);
+
+    }
     // END
 }
