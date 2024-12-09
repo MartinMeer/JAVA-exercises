@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="OOD 2">
+    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="OOD 3 was added classes&amp;tasks">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/json.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/Cottage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/Flat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/Home.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/ReversedSequence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/exerciseTest/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/list.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/list.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/list.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/FileKV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/FileKV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/InMemoryKV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/InMemoryKV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise/KeyValueStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise/KeyValueStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercise/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FileKVTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercise/FileKVTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InMemoryKVTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exercise/InMemoryKVTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/NOTES" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestingPrinciples" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TaskNotes" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TaskNotes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/file" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/file" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +88,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -119,49 +121,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Build java-exercises.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build java-exercises1.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TestPizza.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WithoutTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WithoutTest.right.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java-exercises [:App.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java-exercises [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java-exercises [:TestMyArrayUtils.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java-exercises [installDist].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java-exercises [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java-exercises [test].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java-exercises1 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java-exercises1 [delombok].executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.testGetMidPoint.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DepartmentTest.addEmployees.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.DepartmentTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DepartmentTest.printDepartment.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.DepartmentTestHexlet.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestPizza.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.o2mTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.o2mTest.testAdd.executor&quot;: &quot;Debug&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.java-exercises.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;HHW-OOP&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/oleg/IdeaProjects/java-exercises/src/main/java/exercise&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.19702603&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build java-exercises.executor": "Run",
+    "Gradle.Build java-exercises1.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.TestPizza.executor": "Run",
+    "Gradle.WithoutTest.executor": "Run",
+    "Gradle.WithoutTest.right.executor": "Run",
+    "Gradle.java-exercises [:App.main()].executor": "Run",
+    "Gradle.java-exercises [:Main.main()].executor": "Run",
+    "Gradle.java-exercises [:TestMyArrayUtils.main()].executor": "Run",
+    "Gradle.java-exercises [installDist].executor": "Run",
+    "Gradle.java-exercises [run].executor": "Run",
+    "Gradle.java-exercises [test].executor": "Run",
+    "Gradle.java-exercises1 [clean].executor": "Run",
+    "Gradle.java-exercises1 [delombok].executor": "Run",
+    "JUnit.AppTest (1).executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.AppTest.testGetMidPoint.executor": "Run",
+    "JUnit.DepartmentTest.addEmployees.executor": "Debug",
+    "JUnit.DepartmentTest.executor": "Run",
+    "JUnit.DepartmentTest.printDepartment.executor": "Debug",
+    "JUnit.DepartmentTestHexlet.executor": "Run",
+    "JUnit.FileKVTest.executor": "Run",
+    "JUnit.InMemoryKVTest.executor": "Run",
+    "JUnit.TestPizza.executor": "Run",
+    "JUnit.o2mTest.executor": "Run",
+    "JUnit.o2mTest.testAdd.executor": "Debug",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.java-exercises.executor": "Run",
+    "git-widget-placeholder": "HHW-OOP",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP",
+    "last_opened_file_path": "/home/oleg/IdeaProjects/java-exercises/src/main/java/exercise",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.19702603",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/exercise" />
@@ -182,14 +188,7 @@
       <recent name="TestPizza" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest (1)">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="java-exercises.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.FileKVTest">
     <configuration name="java-exercises [run]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -235,28 +234,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="java-exercises [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="AppTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-exercises.test" />
       <extension name="coverage">
@@ -280,7 +257,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="HHW_classes_and_objects" />
+      <option name="PACKAGE_NAME" value="exercise" />
       <option name="MAIN_CLASS_NAME" value="exercise.AppTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -310,10 +287,40 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="HHW_classes_and_objects" />
+      <option name="PACKAGE_NAME" value="exercise" />
       <option name="MAIN_CLASS_NAME" value="exercise.AppTest" />
       <option name="METHOD_NAME" value="testGetMidPoint" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileKVTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-exercises.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="exercise" />
+      <option name="MAIN_CLASS_NAME" value="exercise.FileKVTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryKVTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-exercises.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="exercise" />
+      <option name="MAIN_CLASS_NAME" value="exercise.InMemoryKVTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -332,20 +339,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.java-exercises [run]" />
-      <item itemvalue="Gradle.java-exercises [test]" />
+      <item itemvalue="JUnit.FileKVTest" />
+      <item itemvalue="JUnit.InMemoryKVTest" />
       <item itemvalue="JUnit.AppTest (1)" />
-      <item itemvalue="JUnit.AppTest.testGetMidPoint" />
       <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.AppTest.testGetMidPoint" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest (1)" />
+        <item itemvalue="JUnit.FileKVTest" />
+        <item itemvalue="JUnit.InMemoryKVTest" />
         <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest (1)" />
         <item itemvalue="JUnit.AppTest.testGetMidPoint" />
-        <item itemvalue="Gradle.java-exercises [test]" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -622,7 +629,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731673207674</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="OOD 3 was added classes&amp;tasks">
+      <option name="closed" value="true" />
+      <created>1733070026986</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733070026986</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -649,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: 04 make my own static generic" />
     <MESSAGE value="feat: 04 make my own static generic v2" />
     <MESSAGE value="feat: 05 make my own static generic v3" />
     <MESSAGE value="feat: 01 stream.sorted()" />
@@ -674,7 +688,8 @@
     <MESSAGE value="task 1" />
     <MESSAGE value="task 2" />
     <MESSAGE value="OOD 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="OOD 2" />
+    <MESSAGE value="OOD 3 was added classes&amp;tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="OOD 3 was added classes&amp;tasks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

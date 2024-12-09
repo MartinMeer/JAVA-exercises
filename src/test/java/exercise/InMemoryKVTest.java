@@ -1,9 +1,11 @@
 package exercise;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.assertThat;
-import java.util.Map;
+
 import java.util.HashMap;
+import java.util.Map;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 class InMemoryKVTest {
@@ -23,7 +25,6 @@ class InMemoryKVTest {
         storage.unset("key");
         assertThat(storage.get("key", "def")).isEqualTo("def");
         assertThat(storage.toMap()).isEqualTo(Map.of("key2", "value2"));
-
     }
 
     @Test

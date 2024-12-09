@@ -7,4 +7,7 @@ interface KeyValueStorage {
     void unset(String key);
     String get(String key, String defaultValue);
     Map<String, String> toMap();
+    void setInMemoryMap(Map<String, String> inMemoryMap);
+
+    void saveMapToFile();
 }
