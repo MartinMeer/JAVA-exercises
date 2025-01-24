@@ -4,42 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat(OOP): Course v2">
+    <list default="true" id="ef46d934-a942-4856-979a-b40de195a57a" name="Changes" comment="feat(OOP): Course v3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCalc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/input" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Box.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CollectionsUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Film.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Man.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyArrayUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyStringUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyUtils/MyListUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/CourseMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP/Course/CourseMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SimpleTriple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Summarize.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Triple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Without.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Woman.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cart/Cart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cart/CartMaker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cart/Good.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MethodsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyArrayUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyListUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyListUtilsAdd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestMyListUtilsFill.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/o2mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestOOP/o2mTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestPizza/TestPizza.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSumm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WithoutTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cart/CartMakerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BinaryOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/CourseMember.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/Lesson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Course/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Department/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Department/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP/Pizza.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CourseTest/m2mTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/DepartmentTest/DepartmentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/DepartmentTest/DepartmentTestHexlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/TT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestOOP/o2mTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/list.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/list.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/list.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/fixtures/result.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +105,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="729867f5a3780b27d89f274df166950ae574a71b" />
+        <entry key="$PROJECT_DIR$" value="Module3-OOP" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,7 +119,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/MartinMeer/java-exercises.git&quot;,
-    &quot;accountId&quot;: &quot;986a6cce-a0e3-48cd-9100-3cdfb4964e7c&quot;
+    &quot;accountId&quot;: &quot;e760e0ac-257c-4464-8e4d-a964cea791a1&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -168,24 +156,35 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Shell Script.java-exercises.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Module3-OOP&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;reflection&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/meer/IdeaProjects/java-exercises1/src/main/java/OOP&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/IdeaProjects/java-exercises&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.47356322&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\java-exercises\src\test\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="OOP" />
       <recent name="TestPizza" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.m2mTest (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="java-exercises.main" />
@@ -319,18 +318,24 @@
       <item itemvalue="Gradle.java-exercises [run]" />
       <item itemvalue="Gradle.java-exercises [test]" />
       <item itemvalue="Gradle.java-exercises1 [delombok]" />
-      <item itemvalue="JUnit.m2mTest (1)" />
       <item itemvalue="JUnit.m2mTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.m2mTest (1)" />
         <item itemvalue="JUnit.m2mTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.java-exercises [test]" />
         <item itemvalue="Gradle.java-exercises1 [delombok]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -340,6 +345,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715444785083</updated>
+      <workItem from="1737719673115" duration="411000" />
+      <workItem from="1737720150309" duration="3398000" />
     </task>
     <task id="LOCAL-00001" summary="feat: capitalizeWords">
       <option name="closed" value="true" />
@@ -525,8 +532,19 @@
       <option name="project" value="LOCAL" />
       <updated>1731072391727</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat(OOP): Course v3">
+      <option name="closed" value="true" />
+      <created>1731079263928</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1731079263928</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -574,7 +592,8 @@
     <MESSAGE value="feat: Builder pattern" />
     <MESSAGE value="feat: Builder pattern v2" />
     <MESSAGE value="feat(OOP): Course v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(OOP): Course v2" />
+    <MESSAGE value="feat(OOP): Course v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(OOP): Course v3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
